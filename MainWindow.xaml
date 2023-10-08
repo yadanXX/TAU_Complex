@@ -7,28 +7,43 @@
     xmlns:local="clr-namespace:TAU_Complex_RebuildForWPF"
     mc:Ignorable="d"
     Title="MainWindow"
-    Height="556"
-    Width="944"
+    Height="552"
+    Width="935"
     WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="28*" />
+                Height="40" />
             <RowDefinition
                 Height="197*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition
-                Width="25*" />
+                Width="200" />
             <ColumnDefinition
-                Width="93*" />
+                Width="1*" />
         </Grid.ColumnDefinitions>
         <Rectangle
             Grid.Column="1"
-            Fill="#7a0303" />
+            Fill="#7a0303"
+            MouseDown="Rectangle_MouseDown"></Rectangle>
         <Rectangle
             Grid.RowSpan="2"
             Grid.Column="0"
             Fill="#092e47" />
+        <StackPanel></StackPanel>
+        <StackPanel
+            Grid.Row="1">
+            <RadioButton
+                Style="{StaticResource menuButton}"
+                Content="Исследование переходных характиристик типовых динамических звеньев"></RadioButton>
+            <RadioButton
+                Style="{StaticResource menuButton}"
+                Content="Исследование устойчивости систем по критерию Михайлова" />
+        </StackPanel>
+        <Frame
+            Name="MainPanel"
+            Grid.Column="1"
+            Grid.Row="1" />
     </Grid>
 </Window>

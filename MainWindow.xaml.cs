@@ -22,6 +22,29 @@ namespace TAU_Complex_RebuildForWPF
         public MainWindow()
         {
             InitializeComponent();
+            MainPanel.Content = new PageMainImage();
         }
+
+        #region Кнопки закрытия и перетаскивания
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+        //private void Border_MouseDown_2(object sender, MouseButtonEventArgs e)
+        //{
+        //    this.Close();            
+        //}
+        //private void Border_MouseEnter(object sender, MouseEventArgs e)
+        //{
+        //    Border_close_Copy.Background = System.Windows.Media.Brushes.Red;
+        //}
+        //private void Border_close_MouseLeave(object sender, MouseEventArgs e)
+        //{
+        //    Border_close_Copy.Background = brush2;
+        //}
+        #endregion
     }
 }
