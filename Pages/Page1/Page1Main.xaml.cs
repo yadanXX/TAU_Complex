@@ -12,15 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using OxyPlot;
+using OxyPlot.Series;
 
-namespace TAU_Complex_RebuildForWPF.Pages
+namespace TAU_Complex_RebuildForWPF.Pages.Page1
 {
-    /// <summary>
-    /// Логика взаимодействия для Page1.xaml
-    /// </summary>
-    public partial class Page1 : Page
+    public partial class Page1Main : Page
     {
-        public Page1()
+        public Page1Main()
         {
             InitializeComponent();
         }

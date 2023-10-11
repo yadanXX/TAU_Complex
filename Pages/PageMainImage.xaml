@@ -9,9 +9,8 @@
     Title="PageMainImage"
     >
     <Grid>
-        <Image
-            
-            Stretch="Uniform"
-            Source="/Pages/togu.png" />
+        <Image Source="/Resources/togu.png"
+               Stretch="Uniform"/>
+
     </Grid>
 </Page>

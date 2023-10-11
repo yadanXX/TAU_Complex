@@ -67,7 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Pages\Page1.xaml">
+    <Page Include="Pages\Page1\Page1Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,8 +93,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Page1.xaml.cs">
-      <DependentUpon>Page1.xaml</DependentUpon>
+    <Compile Include="Pages\Page1\Page1Main.xaml.cs">
+      <DependentUpon>Page1Main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageMainImage.xaml.cs">
       <DependentUpon>PageMainImage.xaml</DependentUpon>
@@ -124,9 +124,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Pages\togu.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
