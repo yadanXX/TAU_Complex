@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TAU_Complex_RebuildForWPF
+namespace TAU_Complex
 {
     public partial class PageMainImage : Page
     {

@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using OxyPlot;
 using OxyPlot.Series;
 
-namespace TAU_Complex_RebuildForWPF.Pages.Page1
+namespace TAU_Complex.Pages.Page1
 {
     public partial class Page1Main : Page
     {

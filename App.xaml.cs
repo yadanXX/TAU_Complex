@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace TAU_Complex_RebuildForWPF
+namespace TAU_Complex
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml
