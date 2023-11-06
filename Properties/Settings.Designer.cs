@@ -22,5 +22,17 @@ namespace TAU_Complex.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.001")]
+        public double Dt {
+            get {
+                return ((double)(this["Dt"]));
+            }
+            set {
+                this["Dt"] = value;
+            }
+        }
     }
 }

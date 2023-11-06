@@ -9,7 +9,7 @@
     Title="PageMainImage"
     >
     <Grid>
-        <Image Source="/Resources/togu.png"
+        <Image Source="/Resources/icons/togu.png"
                Stretch="Uniform"/>
 
     </Grid>

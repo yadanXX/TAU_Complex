@@ -12,14 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using OxyPlot;
-using OxyPlot.Series;
 
 namespace TAU_Complex.Pages.Page1
 {
-    public partial class Page1Main : Page
+    /// <summary>
+    /// Логика взаимодействия для Page1_4.xaml
+    /// </summary>
+    public partial class Page1_4 : Page
     {
-        public Page1Main()
+        public Page1_4()
         {
             InitializeComponent();
         }

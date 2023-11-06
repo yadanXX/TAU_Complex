@@ -118,7 +118,70 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="options" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide_button_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons\slide_button_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="togu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\togu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\icons\togu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Апериодическое_второго_порядка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Апериодическое второго порядка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Апериодическое_звено_ворого_порядка" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Апериодическое звено ворого порядка.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Апериодическое_инерционное" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Апериодическое инерционное .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Апериодическое_инерционное1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Апериодическое инерционное.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Идеально_интегрирующие" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Идеально интегрирующие.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Идеальное_интегрирующие" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Идеальное интегрирующие.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Идеальное_усилительное" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Идеальное усилительное.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Идеальное_усилительное_безынерционное" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Идеальное усилительное безынерционное.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Инерционно_дифферинцирующие" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Инерционно дифферинцирующие .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Инерционное_дифферинцирующие" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Инерционное дифферинцирующие.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Инерционное_реально_интегрирующие" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Инерционное реально интегрирующие.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="инерционное_реальное_интегрирующие" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\инерционное реальное интегрирующие.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Колебательное" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Колебательное.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Колебательное_звено" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\page1Pics\Колебательное звено.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

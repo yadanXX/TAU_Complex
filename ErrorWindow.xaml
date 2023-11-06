@@ -1,0 +1,41 @@
+﻿<Window x:Class="TAU_Complex.ErrorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TAU_Complex"
+        mc:Ignorable="d"
+        Title="ErrorWindow"
+        Height="150"
+        Width="300"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Icon="/Resources/icons/error.png"        
+        AllowsTransparency="True"
+        Background="Transparent">
+    <Border CornerRadius="10"
+            Background="White"
+            BorderThickness="1"
+            BorderBrush="Black"
+            MouseDown="Border_MouseDown">
+        <Grid Background="{x:Null}">
+            <TextBlock x:Name="textBlock"
+                       TextWrapping="Wrap"
+                       Margin="65,34,10,74"
+                       Text="Ошибка"
+                       FontSize="14" />
+            <Button Content="OK"
+                    Width="100"
+                    Height="30"
+                    Margin="100,110,100,10"
+                    BorderThickness="0"
+                    Click="Button_Click"
+                    FontSize="14" />
+            <Image Source="/Resources/icons/error.png"
+                   Width="50"
+                   Height="50"
+                   Margin="10,26,240,74"
+                   Stretch="Uniform" />
+        </Grid>
+    </Border>
+</Window>

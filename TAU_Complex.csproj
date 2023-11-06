@@ -67,13 +67,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Pages\Page1\Page1Main.xaml">
+    <Compile Include="Data.cs" />
+    <Compile Include="ErrorWindow.xaml.cs">
+      <DependentUpon>ErrorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WLink.cs" />
+    <Compile Include="Utils.cs" />
+    <Page Include="ErrorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Variables.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Pages\Page1\Page1_1.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1\Page1_2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1\Page1_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1\Page1_4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1\Page1_5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1\Page1_6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1\Page1_7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page1\Page1_Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageMainImage.xaml">
       <SubType>Designer</SubType>
@@ -101,8 +135,29 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Page1\Page1Main.xaml.cs">
-      <DependentUpon>Page1Main.xaml</DependentUpon>
+    <Compile Include="Pages\Page1\Page1_1.xaml.cs">
+      <DependentUpon>Page1_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1\Page1_2.xaml.cs">
+      <DependentUpon>Page1_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1\Page1_3.xaml.cs">
+      <DependentUpon>Page1_3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1\Page1_4.xaml.cs">
+      <DependentUpon>Page1_4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1\Page1_5.xaml.cs">
+      <DependentUpon>Page1_5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1\Page1_6.xaml.cs">
+      <DependentUpon>Page1_6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1\Page1_7.xaml.cs">
+      <DependentUpon>Page1_7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page1\Page1_Main.xaml.cs">
+      <DependentUpon>Page1_Main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageMainImage.xaml.cs">
       <DependentUpon>PageMainImage.xaml</DependentUpon>
@@ -122,6 +177,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -134,7 +190,44 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\togu.png" />
+    <Resource Include="Resources\icons\togu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\slide_button_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page1Pics\Апериодическое второго порядка.png" />
+    <Resource Include="Resources\page1Pics\Апериодическое звено ворого порядка.png" />
+    <Resource Include="Resources\page1Pics\Апериодическое инерционное .png" />
+    <Resource Include="Resources\page1Pics\Апериодическое инерционное.png" />
+    <Resource Include="Resources\page1Pics\Идеально интегрирующие.png" />
+    <Resource Include="Resources\page1Pics\Идеальное интегрирующие.png" />
+    <Resource Include="Resources\page1Pics\Идеальное усилительное безынерционное.png" />
+    <Resource Include="Resources\page1Pics\Идеальное усилительное.png" />
+    <Resource Include="Resources\page1Pics\Инерционно дифферинцирующие .png" />
+    <Resource Include="Resources\page1Pics\Инерционное дифферинцирующие.png" />
+    <Resource Include="Resources\page1Pics\Инерционное реально интегрирующие.png" />
+    <Resource Include="Resources\page1Pics\инерционное реальное интегрирующие.png" />
+    <Resource Include="Resources\page1Pics\Колебательное звено.png" />
+    <Resource Include="Resources\page1Pics\Колебательное.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

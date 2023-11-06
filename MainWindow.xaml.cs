@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TAU_Complex.Pages.Page1;
 
 namespace TAU_Complex
 {
@@ -23,6 +24,11 @@ namespace TAU_Complex
         {
             InitializeComponent();
             MainPanel.Content = new PageMainImage();
+        }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {           
+            MainPanel.Content = new Page1_Main();
         }
 
         #region Кнопки закрытия и перетаскивания
@@ -45,6 +51,6 @@ namespace TAU_Complex
         //{
         //    Border_close_Copy.Background = brush2;
         //}
-        #endregion
+        #endregion        
     }
 }

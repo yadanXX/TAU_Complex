@@ -52,7 +52,7 @@
     <Style x:Key="menuButtonText"
            TargetType="TextBlock">
         <Setter Property="FontFamily"
-                Value="Montserrat" />
+                Value="Segoe UI" />
         <Setter Property="FontWeight"
                 Value="Normal" />
         <Setter Property="FontSize"
@@ -69,5 +69,17 @@
                 Value="Center" />
         <Setter Property="TextAlignment"
                 Value="Center" />
+    </Style>
+    <Style x:Key="PlotButton"
+           TargetType="Button">
+        <Setter Property="Content"
+                Value="Построить" />
+        <Setter Property="FontSize"
+                Value="15" />
+        <Setter Property="BorderThickness"
+                Value="0" />
+        <Setter Property="Height"
+                Value="44" />
+        
     </Style>
 </ResourceDictionary>
