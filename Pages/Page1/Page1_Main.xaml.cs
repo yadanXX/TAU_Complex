@@ -42,6 +42,7 @@ namespace TAU_Complex.Pages.Page1
             OpenPage(comboBox);
 
             plot.Model = Utils.GetLinearPlotModel("График переходной характеристики", null, "t", "Qвых(t)");
+           
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

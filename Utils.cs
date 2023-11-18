@@ -17,8 +17,9 @@ namespace TAU_Complex
             MyModel.Title = title;
 
             var line = new OxyPlot.Series.LineSeries();
-            if (listPoints == null) listPoints = new List<DataPoint>() { new DataPoint(0, 0) };
-            line.Points.AddRange(listPoints);
+            line.Points.AddRange(new ObservableCollection<DataPoint>());
+            //if (listPoints == null) listPoints = new List<DataPoint>() { new DataPoint(0, 0) };
+            //line.Points.AddRange(listPoints);
             MyModel.Series.Add(line);
 
             MyModel.Axes.Add(new LinearAxis()
