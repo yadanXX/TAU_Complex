@@ -1,0 +1,63 @@
+﻿<Window x:Class="TAU_Complex.MVVM.View.MainWindow_View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TAU_Complex.MVVM.View"
+        xmlns:viewModel="clr-namespace:TAU_Complex.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Height="552"
+        Width="935"
+        WindowStyle="None">
+ 
+    <Window.DataContext>
+        <viewModel:MainWindow_ViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Styles/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="197*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="1"
+                   Fill="#7a0303">
+            <Rectangle.Style>
+                <Style>
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Click">
+                            <EventTrigger.Actions>
+                              
+                            </EventTrigger.Actions>>
+                        </EventTrigger>
+                    </Style.Triggers>>
+                </Style>
+            </Rectangle.Style>
+        </Rectangle>
+        <Rectangle Grid.RowSpan="2"
+                   Grid.Column="0"
+                   Fill="#092e47"
+                   />
+        <StackPanel></StackPanel>
+        <StackPanel Grid.Row="1">
+            <RadioButton Style="{StaticResource menuButton}"
+                         Content="Исследование переходных характиристик типовых динамических звеньев"
+                         Command="{Binding Mod11MainCommand}"></RadioButton>
+            <RadioButton Style="{StaticResource menuButton}"
+                         Content="Исследование устойчивости систем по критерию Михайлова" />
+        </StackPanel>
+        <ContentControl  Name="MainPanel"
+                         Grid.Column="1"
+                         Grid.Row="1"
+                         Content="{Binding CurrentView}" />
+    </Grid>
+</Window>

@@ -2,13 +2,23 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:TAU_Complex"
-             StartupUri="MainWindow.xaml">
+             xmlns:view="clr-namespace:TAU_Complex.MVVM.View"
+             xmlns:viewModel="clr-namespace:TAU_Complex.MVVM.ViewModel"
+             StartupUri="MVVM\View\MainWindow_View.xaml">
     <Application.Resources>
-        <ResourceDictionary>
+        <!--<ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary
-                    Source="/Styles/ButtonStyles.xaml" />
+                <ResourceDictionary Source="/Styles/ButtonStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        </ResourceDictionary>-->
+        <DataTemplate DataType="{x:Type TypeName=viewModel:MainWindow_ViewModel}">
+            <view:MainWindow_View />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewModel:HomeImage_ViewModel}">
+            <view:HomeImage_View />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewModel:Mod11Main_ViewModel}">
+            <view:Mod11Main_View />
+        </DataTemplate>
     </Application.Resources>
 </Application>

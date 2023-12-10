@@ -1,5 +1,7 @@
 ﻿using OxyPlot;
 using OxyPlot.Axes;
+using OxyPlot.Series;
+using OxyPlot.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,15 +17,13 @@ namespace TAU_Complex
         {
             PlotModel MyModel = new PlotModel();
             MyModel.Title = title;
-
             var line = new OxyPlot.Series.LineSeries();
-            line.Points.AddRange(new ObservableCollection<DataPoint>());
-            //if (listPoints == null) listPoints = new List<DataPoint>() { new DataPoint(0, 0) };
-            //line.Points.AddRange(listPoints);
+            if (listPoints == null) listPoints = new List<DataPoint>() { new DataPoint(0, 0) };
+            line.Points.AddRange(listPoints);
             MyModel.Series.Add(line);
 
             MyModel.Axes.Add(new LinearAxis()
-            {                
+            {
                 Position = AxisPosition.Left,
                 MajorGridlineStyle = LineStyle.Dash,
                 MinorGridlineStyle = LineStyle.Dash,
@@ -41,6 +41,28 @@ namespace TAU_Complex
 
             return MyModel;
         }
+
+        //public static void CenterChart(PlotView plotView)
+        //{
+        //    double leftMargin = 0;
+        //    double topMargin = 0;
+
+
+        //    foreach (Series item in plotView.Model.Series)
+        //    {
+        //        LineSeries lineSeries = (item as LineSeries);
+                
+
+        //        if (position.X < 0) leftMargin = Math.Max(leftMargin, -position.X);
+        //        else topMargin = Math.Max(topMargin, position.Y);
+        //    }
+        //    // Применяем смещения
+        //    plotView.PlotArea.MinViewport.Width += leftMargin * 2;
+        //    plotView.PlotArea.MinViewport.Height += topMargin * 2;
+
+
+
+        //}
 
     }
 }
