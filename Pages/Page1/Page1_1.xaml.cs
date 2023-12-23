@@ -33,11 +33,12 @@ namespace TAU_Complex.Pages.Page1
             plotView = plot;
         }
 
+        CancellationToken token = new CancellationToken();
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            token.ThrowIfCancellationRequested();
             (plotView.Model.Series.FirstOrDefault() as LineSeries).Points.Clear();
             plotView.InvalidatePlot(true);
-
             double k1, tk;
             try
             {
@@ -54,15 +55,36 @@ namespace TAU_Complex.Pages.Page1
 
             double Dt = Properties.Settings.Default.Dt;
 
+            List<DataPoint> dataPoints = new List<DataPoint>();
             LineSeries lineSeries = plotView.Model.Series[0] as LineSeries;
-            
-            for (double i = 0; i < tk; i += Dt)
+         
+            int indexPoint = 0;
+            await Task.Run(() =>
             {
-                lineSeries.Points.Add(new DataPoint(i, k1));
-            }
-            plotView.InvalidatePlot(true);
-           
-
+                for (double i = 0; i < tk; i += Dt)
+                {
+                    //dataPoints.Add(new DataPoint(i, k1));
+                    lineSeries.Points.Add(new DataPoint(i, k1));
+                    if (lineSeries.Points.Count == 30000000)
+                    {
+                        break;
+                    }
+                    if (indexPoint > 100000)
+                    {                       
+                        indexPoint = 0;
+                    }
+                    indexPoint++;
+                    //if (dataPoints.Count > 10000)
+                    //{
+                    //    lineSeries.Points.AddRange(dataPoints);            
+                    //    dataPoints.Clear();
+                    //}
+                }
+                //lineSeries.Points.AddRange(dataPoints);
+                
+            }, token);
+            token.ThrowIfCancellationRequested();
+            // plotView.Model = Utils.GetLinearPlotModel("График переходной характеристики", dataPoints, "t", "Qвых(t)");
 
         }
     }

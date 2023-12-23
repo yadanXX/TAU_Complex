@@ -26,7 +26,8 @@
                   SelectionChanged="ComboBox_SelectionChanged" />
         <oxy:PlotView x:Name="plot"
                       Grid.Row="1"
-                      Grid.Column="1" />
+                      Grid.Column="1"
+                      />
         <Frame x:Name="workTable"               
                Grid.Row="1"
                Grid.Column="0"

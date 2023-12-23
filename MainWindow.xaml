@@ -1,0 +1,40 @@
+﻿<Window x:Class="TAU_Complex.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TAU_Complex"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="552"
+        Width="935"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="197*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="1"
+                   Fill="#7a0303"
+                   MouseDown="Rectangle_MouseDown"></Rectangle>
+        <Rectangle Grid.RowSpan="2"
+                   Grid.Column="0"
+                   Fill="#092e47" />
+        <StackPanel></StackPanel>
+        <StackPanel Grid.Row="1">
+            <RadioButton Style="{StaticResource menuButton}"
+                         Click="RadioButton_Click"
+                         Content="Исследование переходных характиристик типовых динамических звеньев"></RadioButton>
+            <RadioButton Style="{StaticResource menuButton}"
+                         Content="Исследование устойчивости систем по критерию Михайлова" />
+        </StackPanel>
+        <Frame  Name="MainPanel"
+                Grid.Column="1"
+                Grid.Row="1"
+                NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>
