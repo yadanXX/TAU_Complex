@@ -12,13 +12,14 @@
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="49" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="34" />
-            <RowDefinition />
+            <RowDefinition Height="34"/>
+            <RowDefinition  />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Image Source="/Resources/page1Pics/Идеальное усилительное безынерционное.png"
-               HorizontalAlignment="Left"
+               HorizontalAlignment="Center"
                Width="349"
                Height="49"
                VerticalAlignment="Center" />
@@ -41,8 +42,8 @@
                   Height="24"
                   VerticalAlignment="Top"
                   Grid.Row="1" />
-        <Canvas Margin="10,10,0,0"
-                VerticalAlignment="Top"
+        <Canvas Margin="10,0,0,0"
+                VerticalAlignment="Center"
                 HorizontalAlignment="Left"
                 Width="20"
                 Height="24"
@@ -54,14 +55,14 @@
         </Canvas>
         <TextBox x:Name="textBoxTk"
                  FontSize="16"
-                 Margin="30,10,0,0"
+                 Margin="30,0,0,0"
                  Height="24"
-                 VerticalAlignment="Top"
+                 VerticalAlignment="Center"
                  HorizontalAlignment="Left"
                  Width="101"
                  Grid.Row="2" />
         <Button Style="{StaticResource ResourceKey=PlotButton}"
-                Grid.Row="3"
+                Grid.Row="4"
                 Click="Button_Click" />
     </Grid>
 </Page>

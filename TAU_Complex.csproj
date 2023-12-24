@@ -229,5 +229,8 @@
     <Resource Include="Resources\page1Pics\Колебательное звено.png" />
     <Resource Include="Resources\page1Pics\Колебательное.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Page1\Апериодическое инерционное .png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,12 +20,13 @@ namespace TAU_Complex
     
     public partial class MainWindow : Window
     {
+
+
         public MainWindow()
         {
             InitializeComponent();
             MainPanel.Content = new PageMainImage();
         }
-
         private void RadioButton_Click(object sender, RoutedEventArgs e)
         {           
             MainPanel.Content = new Page1_Main();

@@ -24,5 +24,10 @@ namespace TAU_Complex.Pages.Page1
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
