@@ -41,7 +41,7 @@ namespace TAU_Complex.Pages.Page1
             double k1, tk;
             try
             {
-                k1 = Convert.ToDouble(textBoxK1.Text.Replace(".", ","));
+                k1 = Convert.ToDouble(textBoxk1.Text.Replace(".", ","));
                 tk = Convert.ToDouble(textBoxTk.Text.Replace(".", ","));
                 if (tk <= 0 || k1 <= 0) throw new Exception();
             }

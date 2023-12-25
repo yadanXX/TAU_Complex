@@ -33,8 +33,8 @@ namespace TAU_Complex.Pages.Page1
             List<Combo> list = new List<Combo>
             {
                 new Combo { name = "Идеальное усилительное (безынерционное) звено", page = new Page1_1(plot) },
-                new Combo { name = "Апериодическое (инерционное) звено", page = new Page1_2() },
-                new Combo { name = "Апериодическое звено второго порядка", page = new Page1_3() },
+                new Combo { name = "Апериодическое (инерционное) звено", page = new Page1_2(plot) },
+                new Combo { name = "Апериодическое звено второго порядка", page = new Page1_3(plot) },
                 new Combo { name = "Колебательное звено", page = new Page1_4() },
                 new Combo { name = "Идеальное интегрирующее звено", page = new Page1_5() },
                 new Combo { name = "Инерционное (реальное) интегрирующие звено", page = new Page1_6() },

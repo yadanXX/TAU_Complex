@@ -34,7 +34,7 @@
             <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
                        Text="1" />
         </Canvas>
-        <TextBox  x:Name="textBoxK1"
+        <TextBox  x:Name="textBoxk1"
                   FontSize="16"
                   Margin="30,10,0,0"
                   HorizontalAlignment="Left"
