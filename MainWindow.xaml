@@ -26,11 +26,26 @@
                    Fill="#092e47" />
         <StackPanel></StackPanel>
         <StackPanel Grid.Row="1">
-            <RadioButton Style="{StaticResource menuButton}"
-                         Click="RadioButton_Click"
-                         Content="Исследование переходных характиристик типовых динамических звеньев"></RadioButton>
-            <RadioButton Style="{StaticResource menuButton}"
-                         Content="Исследование устойчивости систем по критерию Михайлова" />
+            <RadioButton Name="button1"
+                         Style="{StaticResource menuButton}"
+                         Content="Исследование переходных характиристик типовых динамических звеньев"
+                         Click="RadioButton_Click" />
+            <RadioButton Name="button2"
+                         Style="{StaticResource menuButton}"
+                         Content="Исследование устойчивости систем по критерию Михайлова"
+                         Click="RadioButton_Click" />
+            <RadioButton Name="button3"
+                         Style="{StaticResource menuButton}"
+                         Content="Исследование устойчивости систем по критерию Найквиста"
+                         Click="RadioButton_Click" />
+            <RadioButton Name="button4"
+                         Style="{StaticResource menuButton}"
+                         Content="Исследование устойчивости САУ со звеном чистого запаздывания"
+                         Click="RadioButton_Click" />
+            <RadioButton Name="button5"
+                         Style="{StaticResource menuButton}"
+                         Content="Исследование точности САУ"
+                         Click="RadioButton_Click" />
         </StackPanel>
         <Frame  Name="MainPanel"
                 Grid.Column="1"

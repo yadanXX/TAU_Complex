@@ -11,8 +11,8 @@
       d:DesignWidth="503.5">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="81*" />
-            <ColumnDefinition Width="79*" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />

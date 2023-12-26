@@ -1,0 +1,214 @@
+﻿<Page x:Class="TAU_Complex.Pages.Page5"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:TAU_Complex.Pages"
+      mc:Ignorable="d"
+      xmlns:oxy="http://oxyplot.org/wpf"
+      d:DesignHeight="471.248"
+      d:DesignWidth="697.265">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/TAU_Complex;component/Styles/Variables.xaml" />
+                <ResourceDictionary Source="/TAU_Complex;component/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Source="/Resources/page5Pics/Схема точности.jpg"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2" />
+        <Grid Grid.Row="1"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <oxy:PlotView x:Name="plotView1"
+                          Grid.Row="0" />
+            <oxy:PlotView x:Name="plotView2"
+                          Grid.Row="1" />
+        </Grid>
+        <Grid Grid.Column="0"
+              Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0"
+                      Grid.ColumnSpan="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           Style="{DynamicResource ResourceKey=LabelEveryone}"
+                           Content="Входное воздействие:" />
+                    <RadioButton Grid.Row="1"
+                                 Content="Ступенчатое" />
+                    <RadioButton Grid.Row="2"
+                                 Content="Линейно возрастающее" />
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Row="1"
+                      Grid.ColumnSpan="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           Style="{DynamicResource ResourceKey=LabelEveryone}"
+                           Content="Корректирующие звено:" />
+                    <RadioButton Grid.Row="1"
+                                 Content="Усилительное" />
+                    <RadioButton Grid.Row="2"
+                                 Content="Реальное дифференцирующее" />
+                    <RadioButton Grid.Row="3"
+                                 Content="Изодромное" />
+                </Grid>
+            </GroupBox>
+            <TextBox x:Name="textBoxT1"
+                     FontSize="16"
+                     Margin="42,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Width="50"
+                     Grid.Row="2" />
+            <Canvas Margin="22,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="25"
+                    VerticalAlignment="Top"
+                    Grid.Row="2"
+                    Grid.RowSpan="2">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="T" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text="1"
+                           Canvas.Left="9"
+                           Canvas.Top="11" />
+            </Canvas>
+            <TextBox x:Name="textBoxtk"
+                     FontSize="16"
+                     Margin="42,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Width="50"
+                     Grid.Row="3" />
+            <Canvas Margin="22,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="3">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="t" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text="k"
+                           Canvas.Left="9"
+                           Canvas.Top="11" />
+            </Canvas>
+            <TextBox x:Name="textBoxTky"
+                     FontSize="16"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="50"
+                     Grid.Row="2"
+                     Grid.Column="1"
+                     Margin="27,10,0,0" />
+            <Canvas Margin="5,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="22"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="3"
+                    Grid.Column="1">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="K" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text="ky"
+                           Canvas.Left="11"
+                           Canvas.Top="11"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Width="13" />
+            </Canvas>
+            <TextBox x:Name="textBoxRamp"
+                     FontSize="16"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="50"
+                     Grid.Row="5"
+                     Grid.Column="1"
+                     Margin="27,10,0,0"
+                     Grid.RowSpan="5" />
+            <TextBlock Grid.Row="5"
+                       Text="Коэф. наклона"
+                       Margin="16,14,0,3" />
+            <Button Style="{StaticResource ResourceKey=PlotButton}"
+                    Grid.Row="9"
+                    Click="Button_Click"
+                    Margin="0,28,0,0"
+                    Grid.ColumnSpan="2" />
+            <TextBox x:Name="textBoxKky"
+                     FontSize="16"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="50"
+                     Grid.Row="3"
+                     Grid.Column="1"
+                     Margin="27,10,0,0" />
+            <Canvas Margin="4,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="22"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="2"
+                    Grid.Column="1">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="T" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text="ky"
+                           Canvas.Left="11"
+                           Canvas.Top="11"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Width="13" />
+            </Canvas>
+        </Grid>
+    </Grid>
+</Page>

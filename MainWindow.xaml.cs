@@ -14,13 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TAU_Complex.Pages.Page1;
+using TAU_Complex.Pages;
 
 namespace TAU_Complex
 {
-    
+
     public partial class MainWindow : Window
     {
-
+        public Page ActivePage;
+        private Page page1 = new Page1_Main();
+        private Page page2 = new Page2();
+        private Page page3 = new Page3();
+        private Page page4 = new Page4();
+        private Page page5 = new Page5();
 
         public MainWindow()
         {
@@ -28,8 +34,26 @@ namespace TAU_Complex
             MainPanel.Content = new PageMainImage();
         }
         private void RadioButton_Click(object sender, RoutedEventArgs e)
-        {           
-            MainPanel.Content = new Page1_Main();
+        {
+            switch ((sender as RadioButton).Name)
+            {
+                case "button1":
+                    MainPanel.Content = page1;
+                    break;
+                case "button2":
+                    MainPanel.Content = page2;
+                    break;
+                case "button3":
+                    MainPanel.Content = page3;
+                    break;
+                case "button4":
+                    MainPanel.Content = page4;
+                    break;
+                case "button5":
+                    MainPanel.Content = page5;
+                    break;
+
+            }
         }
 
         #region Кнопки закрытия и перетаскивания

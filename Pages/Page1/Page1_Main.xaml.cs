@@ -26,7 +26,7 @@ namespace TAU_Complex.Pages.Page1
             public string name { get; set; }
             public Page page { get; set; }
         }
-
+        private PlotModel baseModel;
         public Page1_Main()
         {
             InitializeComponent();
@@ -35,17 +35,17 @@ namespace TAU_Complex.Pages.Page1
                 new Combo { name = "Идеальное усилительное (безынерционное) звено", page = new Page1_1(plot) },
                 new Combo { name = "Апериодическое (инерционное) звено", page = new Page1_2(plot) },
                 new Combo { name = "Апериодическое звено второго порядка", page = new Page1_3(plot) },
-                new Combo { name = "Колебательное звено", page = new Page1_4() },
-                new Combo { name = "Идеальное интегрирующее звено", page = new Page1_5() },
-                new Combo { name = "Инерционное (реальное) интегрирующие звено", page = new Page1_6() },
-                new Combo { name = "Инерционное дифференцирующие звено", page = new Page1_7() }
+                new Combo { name = "Колебательное звено", page = new Page1_4(plot) },
+                new Combo { name = "Идеальное интегрирующее звено", page = new Page1_5(plot) },
+                new Combo { name = "Инерционное (реальное) интегрирующие звено", page = new Page1_6(plot) },
+                new Combo { name = "Инерционное дифференцирующие звено", page = new Page1_7(plot) }
             };
             comboBox.ItemsSource = list;
             comboBox.DisplayMemberPath = "name";
             OpenPage(comboBox);
 
-            plot.Model = Utils.GetLinearPlotModel("График переходной характеристики", null, "t", "Qвых(t)");
-
+            baseModel = Utils.GetLinearPlotModel("График переходной характеристики", null, "t", "Qвых(t)");
+            plot.Model = baseModel;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -59,8 +59,11 @@ namespace TAU_Complex.Pages.Page1
             if (switchedModel != null)
             {
                 plot.Model = switchedModel;
-            }          
-            
+            }
+            else
+            {
+                plot.Model = baseModel;
+            }
         }
     }
     interface SubPageModule1

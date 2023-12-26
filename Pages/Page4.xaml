@@ -1,0 +1,165 @@
+﻿<Page x:Class="TAU_Complex.Pages.Page4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:TAU_Complex.Pages"
+      mc:Ignorable="d"
+      xmlns:oxy="http://oxyplot.org/wpf"
+      d:DesignHeight="471.248"
+      d:DesignWidth="697.265">
+    <Page.Resources>
+        <ResourceDictionary Source="/Styles/Variables.xaml" />
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Source="/Resources/page4Pics/Схема запаздывания.jpg"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2" />
+        <Grid x:Name="grahpGrid"
+            Grid.Row="1"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <oxy:PlotView x:Name="plotView1"
+                          Grid.Row="0" />
+            <oxy:PlotView x:Name="plotView2"
+                          Grid.Row="1" />
+        </Grid>
+        <Grid 
+            Grid.Column="0"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="34" />
+                <RowDefinition Height="34" />
+                <RowDefinition Height="34" />
+                <RowDefinition Height="34" />
+                <RowDefinition Height="34" />
+                <RowDefinition Height="0*" />
+                <RowDefinition Height="44" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <TextBox x:Name="textBoxK"
+                     FontSize="16"
+                     Margin="30,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="101"
+                     Grid.Row="0" />
+            <Canvas Margin="10,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="0">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="K" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text=""
+                           Canvas.Left="9"
+                           Canvas.Top="11" />
+            </Canvas>
+            <TextBox x:Name="textBoxT"
+                     FontSize="16"
+                     Margin="30,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="101"
+                     Grid.Row="1" />
+            <Canvas Margin="10,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="1">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="T" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text=""
+                           Canvas.Left="9"
+                           Canvas.Top="11" />
+            </Canvas>
+            <TextBox x:Name="textBoxtau"
+                     FontSize="16"
+                     Margin="30,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="101"
+                     Grid.Row="2" />
+            <Canvas Margin="10,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="2">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="𝜏" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text=""
+                           Canvas.Left="9"
+                           Canvas.Top="11" />
+            </Canvas>
+            <TextBox x:Name="textBoxWk"
+                     FontSize="16"
+                     Margin="30,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="101"
+                     Grid.Row="3" />
+            <Canvas Margin="10,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="3">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="W"
+                           HorizontalAlignment="Left"
+                           Canvas.Left="-8"
+                           Canvas.Top="1"
+                           VerticalAlignment="Center"
+                           Width="18" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text="k" />
+            </Canvas>
+            <TextBox x:Name="textBoxtk"
+                     FontSize="16"
+                     Margin="30,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="101"
+                     Grid.Row="4" />
+            <Canvas Margin="10,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="4">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="t" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text="k" />
+            </Canvas>
+            <Button Style="{StaticResource ResourceKey=PlotButton}"
+                    Grid.Row="6"
+                    Click="Button_Click" />
+            <oxy:PlotView x:Name="plotView3"
+                          Grid.Row="7" />
+        </Grid>
+    </Grid>
+</Page>
