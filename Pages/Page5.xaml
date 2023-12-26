@@ -18,14 +18,15 @@
     </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="210" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Image Source="/Resources/page5Pics/Схема точности.jpg"
+        <Image Name="SchemePic"
+               Source="/Resources/page5Pics/Схема точности.jpg"
                Grid.Row="0"
                Grid.Column="0"
                Grid.ColumnSpan="2" />
@@ -49,10 +50,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="34" />
+                <RowDefinition Height="34" />
+                <RowDefinition Height="34" />
+                <RowDefinition Height="34" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -70,9 +71,13 @@
                     <Label Grid.Row="0"
                            Style="{DynamicResource ResourceKey=LabelEveryone}"
                            Content="Входное воздействие:" />
-                    <RadioButton Grid.Row="1"
+                    <RadioButton Name="radioButtonStep"
+                                 Checked="radioButton_CheckedChanged"
+                                 Grid.Row="1"
                                  Content="Ступенчатое" />
-                    <RadioButton Grid.Row="2"
+                    <RadioButton Name="radioButtonRamp"
+                                 Checked="radioButton_CheckedChanged"
+                                 Grid.Row="2"
                                  Content="Линейно возрастающее" />
                 </Grid>
             </GroupBox>
@@ -88,15 +93,21 @@
                     <Label Grid.Row="0"
                            Style="{DynamicResource ResourceKey=LabelEveryone}"
                            Content="Корректирующие звено:" />
-                    <RadioButton Grid.Row="1"
+                    <RadioButton Name="radioButtonAmp"
+                                 Grid.Row="1"
+                                 Checked="radioButton_CheckedChanged"
                                  Content="Усилительное" />
-                    <RadioButton Grid.Row="2"
+                    <RadioButton Name="radioButtonDif"
+                                 Checked="radioButton_CheckedChanged"
+                                 Grid.Row="2"
                                  Content="Реальное дифференцирующее" />
-                    <RadioButton Grid.Row="3"
+                    <RadioButton Name="radioButtonExo"
+                                 Checked="radioButton_CheckedChanged"
+                                 Grid.Row="3"
                                  Content="Изодромное" />
                 </Grid>
             </GroupBox>
-            <TextBox x:Name="textBoxT1"
+            <TextBox x:Name="textBoxK"
                      FontSize="16"
                      Margin="42,10,0,0"
                      Height="24"
@@ -112,9 +123,9 @@
                     Grid.Row="2"
                     Grid.RowSpan="2">
                 <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
-                           Text="T" />
+                           Text="K" />
                 <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
-                           Text="1"
+                           Text=""
                            Canvas.Left="9"
                            Canvas.Top="11" />
             </Canvas>
@@ -122,16 +133,16 @@
                      FontSize="16"
                      Margin="42,10,0,0"
                      Height="24"
-                     VerticalAlignment="Center"
+                     VerticalAlignment="Top"
                      HorizontalAlignment="Left"
                      Width="50"
-                     Grid.Row="3" />
+                     Grid.Row="4" />
             <Canvas Margin="22,10,0,0"
                     HorizontalAlignment="Left"
                     Width="20"
                     Height="24"
                     VerticalAlignment="Top"
-                    Grid.Row="3">
+                    Grid.Row="4">
                 <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
                            Text="t" />
                 <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
@@ -139,7 +150,7 @@
                            Canvas.Left="9"
                            Canvas.Top="11" />
             </Canvas>
-            <TextBox x:Name="textBoxTky"
+            <TextBox x:Name="textBoxKky"
                      FontSize="16"
                      Height="24"
                      VerticalAlignment="Top"
@@ -147,7 +158,7 @@
                      Width="50"
                      Grid.Row="2"
                      Grid.Column="1"
-                     Margin="27,10,0,0" />
+                     Margin="29,10,0,0" />
             <Canvas Margin="5,10,0,0"
                     HorizontalAlignment="Left"
                     Width="22"
@@ -156,7 +167,7 @@
                     Grid.Row="3"
                     Grid.Column="1">
                 <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
-                           Text="K" />
+                           Text="T" />
                 <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
                            Text="ky"
                            Canvas.Left="11"
@@ -173,17 +184,16 @@
                      Width="50"
                      Grid.Row="5"
                      Grid.Column="1"
-                     Margin="27,10,0,0"
-                     Grid.RowSpan="5" />
+                     Margin="29,10,0,0" />
             <TextBlock Grid.Row="5"
                        Text="Коэф. наклона"
                        Margin="16,14,0,3" />
             <Button Style="{StaticResource ResourceKey=PlotButton}"
-                    Grid.Row="9"
+                    Grid.Row="10"
                     Click="Button_Click"
                     Margin="0,28,0,0"
                     Grid.ColumnSpan="2" />
-            <TextBox x:Name="textBoxKky"
+            <TextBox x:Name="textBoxTky"
                      FontSize="16"
                      Height="24"
                      VerticalAlignment="Top"
@@ -191,7 +201,7 @@
                      Width="50"
                      Grid.Row="3"
                      Grid.Column="1"
-                     Margin="27,10,0,0" />
+                     Margin="29,10,0,0" />
             <Canvas Margin="4,10,0,0"
                     HorizontalAlignment="Left"
                     Width="22"
@@ -200,7 +210,7 @@
                     Grid.Row="2"
                     Grid.Column="1">
                 <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
-                           Text="T" />
+                           Text="K" />
                 <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
                            Text="ky"
                            Canvas.Left="11"
@@ -208,6 +218,27 @@
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            Width="13" />
+            </Canvas>
+            <TextBox x:Name="textBoxT"
+                     FontSize="16"
+                     Margin="42,10,0,0"
+                     Height="24"
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Left"
+                     Width="50"
+                     Grid.Row="3" />
+            <Canvas Margin="22,10,0,0"
+                    HorizontalAlignment="Left"
+                    Width="20"
+                    Height="24"
+                    VerticalAlignment="Top"
+                    Grid.Row="3">
+                <TextBlock Style="{StaticResource ResourceKey=canvasLeft}"
+                           Text="T" />
+                <TextBlock Style="{StaticResource ResourceKey=canvasBot}"
+                           Text=""
+                           Canvas.Left="9"
+                           Canvas.Top="11" />
             </Canvas>
         </Grid>
     </Grid>

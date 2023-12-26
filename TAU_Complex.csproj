@@ -83,6 +83,9 @@
     <Compile Include="Pages\Page5.xaml.cs">
       <DependentUpon>Page5.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Page6.xaml.cs">
+      <DependentUpon>Page6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WLink.cs" />
     <Compile Include="Utils.cs" />
     <Page Include="ErrorWindow.xaml">
@@ -134,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Page5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Page6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -284,6 +291,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\page5Pics\точность.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page5Pics\Схема точности1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page5Pics\Схема точности2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page5Pics\Схема точности3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page6Pics\схема инвариатность.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page6Pics\Инвариантность.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

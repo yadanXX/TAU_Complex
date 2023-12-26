@@ -22,16 +22,18 @@ namespace TAU_Complex
     public partial class MainWindow : Window
     {
         public Page ActivePage;
+        private Page pageMainImage = new PageMainImage();
         private Page page1 = new Page1_Main();
         private Page page2 = new Page2();
         private Page page3 = new Page3();
         private Page page4 = new Page4();
         private Page page5 = new Page5();
+        private Page page6 = new Page6();
 
         public MainWindow()
         {
             InitializeComponent();
-            MainPanel.Content = new PageMainImage();
+            MainPanel.Content = pageMainImage;
         }
         private void RadioButton_Click(object sender, RoutedEventArgs e)
         {
@@ -51,6 +53,9 @@ namespace TAU_Complex
                     break;
                 case "button5":
                     MainPanel.Content = page5;
+                    break;
+                case "button6":
+                    MainPanel.Content = page6;
                     break;
 
             }
@@ -76,6 +81,33 @@ namespace TAU_Complex
         //{
         //    Border_close_Copy.Background = brush2;
         //}
-        #endregion        
+
+        private void Button_Click_min(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+        private void Button_Click_exit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void Button_Click_close(object sender, RoutedEventArgs e)
+        {
+            MainPanel.Content = pageMainImage;
+        }
+        private void Button_Click_slide(object sender, RoutedEventArgs e)
+        {
+            if (slideCol.Width.Value != 0)
+            {
+                slideCol.Width = new GridLength(0);
+            }
+            else
+            {
+                slideCol.Width = new GridLength(200);
+            }
+
+        }
+        #endregion
+
+
     }
 }

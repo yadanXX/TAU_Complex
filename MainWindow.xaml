@@ -9,13 +9,14 @@
         Height="552"
         Width="935"
         WindowStyle="None">
-    <Grid>
+    <Grid Name="mainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="197*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200"
+                              Name="slideCol" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <Rectangle Grid.Column="1"
@@ -24,6 +25,38 @@
         <Rectangle Grid.RowSpan="2"
                    Grid.Column="0"
                    Fill="#092e47" />
+        <Button  Grid.Row="0"
+                 Grid.Column="1"
+                 HorizontalAlignment="Right"
+                 Margin="0,0,0,0"
+                 Background="{x:Null}"
+                 Click="Button_Click_exit">
+            <Image Source="/Resources/icons/exit.png" />
+        </Button>
+        <Button  Grid.Row="0"
+                 Grid.Column="1"
+                 HorizontalAlignment="Right"
+                 Margin="0,0,40,0"
+                 Background="{x:Null}"
+                 Click="Button_Click_min">
+            <Image Source="/Resources/icons/min.png" />
+        </Button>
+        <Button  Grid.Row="0"
+                 Grid.Column="1"
+                 HorizontalAlignment="Left"
+                 Margin="40,0,0,0"
+                 Background="{x:Null}"
+                 Click="Button_Click_close">
+            <Image Source="/Resources/icons/Close.png" />
+        </Button>
+        <Button  Grid.Row="0"
+                 Grid.Column="1"
+                 HorizontalAlignment="Left"
+                 Margin="0,0,0,0"
+                 Background="{x:Null}"
+                 Click="Button_Click_slide">
+            <Image Source="/Resources/icons/slide_button_icon.png" />
+        </Button>
         <StackPanel></StackPanel>
         <StackPanel Grid.Row="1">
             <RadioButton Name="button1"
@@ -45,6 +78,10 @@
             <RadioButton Name="button5"
                          Style="{StaticResource menuButton}"
                          Content="Исследование точности САУ"
+                         Click="RadioButton_Click" />
+            <RadioButton Name="button6"
+                         Style="{StaticResource menuButton}"
+                         Content="Исследование инвариантности систем"
                          Click="RadioButton_Click" />
         </StackPanel>
         <Frame  Name="MainPanel"
