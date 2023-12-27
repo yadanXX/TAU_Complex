@@ -87,7 +87,7 @@ namespace TAU_Complex.Pages
                 deter = Math.Pow(T, 2) * Math.Pow(i, 3) + i;
                 dataPoints2.Add(new DataPoint( u / deter, v / deter));
             }
-            plotView2.Model = Utils.GetLinearPlotModel("АФЧХ", dataPoints1, "u(w)", "jv(w)");
+            plotView2.Model = Utils.GetLinearPlotModel("АФЧХ", dataPoints2, "u(w)", "jv(w)");
 
             double sus_k, sus_t;
             for (double i = 0; i < Math.PI / (2 * tau); i += Dt)
@@ -100,7 +100,7 @@ namespace TAU_Complex.Pages
                 //}
                 dataPoints2.Add(new DataPoint(sus_k, sus_t));
             }
-            plotView3.Model = Utils.GetLinearPlotModel("Область устойчивости", dataPoints1, "K", "T");
+            plotView3.Model = Utils.GetLinearPlotModel("Область устойчивости", dataPoints3, "K", "T");
         }
     }
 }

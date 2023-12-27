@@ -36,17 +36,7 @@ namespace TAU_Complex.Pages
         private static Random rnd = new Random();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            double k;
-            double kp;
-            double ky;
-            double kd;
-            double kr;
-            double T;
-            double T1;
-            double T2;
-            double Ty;
-            double Td;
-            double tk;
+            double k, kp, ky, kd, kr, T, T1, T2, Ty, Td, tk;
             double kramp = 0;
             double rand_value = 0;
             double sigma = 0;
@@ -64,7 +54,7 @@ namespace TAU_Complex.Pages
                 T2 = Convert.ToDouble(textBoxT2.Text.Replace(".", ","));
                 Ty = Convert.ToDouble(textBoxTy.Text.Replace(".", ","));
                 Td = Convert.ToDouble(textBoxTd.Text.Replace(".", ","));
-               
+
                 if (((bool)(radioButtonRandom.IsChecked) && comboBox1.SelectedIndex == 1))
                 {
                     mu = Convert.ToDouble(textBoxG1.Text.Replace(".", ","));
@@ -86,7 +76,7 @@ namespace TAU_Complex.Pages
                     else
                     {
                         rand_value = Convert.ToDouble(textBoxRV2.Text.Replace(".", ","));
-                    }                    
+                    }
                     if (rand_value <= 0) throw new Exception();
                 }
                 if (tk <= 0 || k <= 0 || kp <= 0 || ky <= 0 || kd <= 0 || kr <= 0 || T <= 0 || T1 <= 0 || T2 <= 0 || Ty <= 0 || Td <= 0) throw new Exception();
@@ -135,13 +125,13 @@ namespace TAU_Complex.Pages
                 (wv2, temp2) = WLink.Aperiodic(wv1 + wv04, ky, Ty, temp2, Dt);
                 (wv3, temp31, temp32) = WLink.Integrating(wv2, kd, Td, temp31, temp32, Dt);
                 wv4 = WLink.NonEnertion(wv3, kr);
-                dataPoints1.Add(new DataPoint( i, wv4));
-                dataPoints2.Add(new DataPoint( i, enter - wv4));
-                dataPoints3.Add(new DataPoint( i, enter));
+                dataPoints1.Add(new DataPoint(i, wv4));
+                dataPoints2.Add(new DataPoint(i, enter - wv4));
+                dataPoints3.Add(new DataPoint(i, enter));
             }
             plotView1.Model = Utils.GetLinearPlotModel("График переходной характеристики", dataPoints1, "t", "Qвых(t)");
             plotView2.Model = Utils.GetLinearPlotModel("Ошибка", dataPoints2, "t", "∆Q(t)");
-            plotView3.Model = Utils.GetLinearPlotModel("Входной сигнал", dataPoints1, "t", "Qвх(t)");
+            plotView3.Model = Utils.GetLinearPlotModel("Входной сигнал", dataPoints3, "t", "Qвх(t)");
         }
 
         private double ramp(double x, double k)
@@ -195,13 +185,13 @@ namespace TAU_Complex.Pages
             }
         }
 
-        private void HideExept(Grid exept) 
+        private void HideExept(Grid exept)
         {
             grid1.Visibility = Visibility.Collapsed;
             grid2.Visibility = Visibility.Collapsed;
             grid3.Visibility = Visibility.Collapsed;
             grid4.Visibility = Visibility.Collapsed;
-        
+
             exept.Visibility = Visibility.Visible;
         }
         private void radioButtonStep_Checked(object sender, RoutedEventArgs e)

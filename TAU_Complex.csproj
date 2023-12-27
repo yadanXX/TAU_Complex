@@ -307,5 +307,11 @@
   <ItemGroup>
     <Resource Include="Resources\page6Pics\Инвариантность.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page3Pics\схема найквист2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page2Pics\Схема михайлов2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
