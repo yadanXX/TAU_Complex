@@ -11,10 +11,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="RadioButton">
-                    <StackPanel>
+                    <DockPanel VerticalAlignment="Stretch">                        
                         <TextBlock Style="{DynamicResource ResourceKey=menuButtonText}"
                                    Text="{TemplateBinding Content}" />
-                    </StackPanel>
+                    </DockPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -25,10 +25,11 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="RadioButton">
-                            <StackPanel Background="#0a3755">
+                            <DockPanel VerticalAlignment="Stretch"
+                                        Background="#0a3755">
                                 <TextBlock Style="{DynamicResource ResourceKey=menuButtonText}"
                                            Text="{TemplateBinding Content}" />
-                            </StackPanel>
+                            </DockPanel>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
@@ -38,11 +39,12 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="RadioButton">
-                            <StackPanel Background="#052235">
+                            <DockPanel VerticalAlignment="Stretch"
+                                        Background="#052235">
                                 <TextBlock Style="{DynamicResource ResourceKey=menuButtonText}"
                                            Text="{TemplateBinding Content}"
                                            FontSize="14.5" />
-                            </StackPanel>
+                            </DockPanel>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
@@ -51,10 +53,6 @@
     </Style>
     <Style x:Key="menuButtonText"
            TargetType="TextBlock">
-        <Setter Property="HorizontalAlignment"
-                Value="Center" />
-        <Setter Property="VerticalAlignment"
-                Value="Center" />
         <Setter Property="FontFamily"
                 Value="Segoe UI" />
         <Setter Property="FontWeight"
@@ -65,10 +63,8 @@
                 Value="White" />
         <Setter Property="TextWrapping"
                 Value="Wrap" />
-        <Setter Property="Height"
-                Value="70" />
         <Setter Property="VerticalAlignment"
-                Value="Stretch" />
+                Value="Center" />
         <Setter Property="HorizontalAlignment"
                 Value="Center" />
         <Setter Property="TextAlignment"
@@ -84,6 +80,5 @@
                 Value="0" />
         <Setter Property="Height"
                 Value="44" />
-        
     </Style>
 </ResourceDictionary>

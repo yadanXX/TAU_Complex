@@ -8,12 +8,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TAU_Complex</RootNamespace>
     <AssemblyName>TAU_Complex</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,20 +72,26 @@
     <Compile Include="ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page2.xaml.cs">
+    <Compile Include="Pages\Vol1\Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page3.xaml.cs">
+    <Compile Include="Pages\Vol1\Page3.xaml.cs">
       <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page4.xaml.cs">
+    <Compile Include="Pages\Vol1\Page4.xaml.cs">
       <DependentUpon>Page4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page5.xaml.cs">
+    <Compile Include="Pages\Vol1\Page5.xaml.cs">
       <DependentUpon>Page5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page6.xaml.cs">
+    <Compile Include="Pages\Vol1\Page7_Vol1.xaml.cs">
+      <DependentUpon>Page7_Vol1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Vol1\Page6.xaml.cs">
       <DependentUpon>Page6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Vol2\Page1_Vol2.xaml.cs">
+      <DependentUpon>Page1_Vol2.xaml</DependentUpon>
     </Compile>
     <Compile Include="WLink.cs" />
     <Compile Include="Utils.cs" />
@@ -92,61 +99,69 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_1.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_2.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_3.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_4.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_5.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_6.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_7.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_7.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page1\Page1_Main.xaml">
+    <Page Include="Pages\Vol1\Page1\Page1_Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page2.xaml">
+    <Page Include="Pages\Vol1\Page2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page3.xaml">
+    <Page Include="Pages\Vol1\Page3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page4.xaml">
+    <Page Include="Pages\Vol1\Page4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page5.xaml">
+    <Page Include="Pages\Vol1\Page5.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Page6.xaml">
+    <Page Include="Pages\Vol1\Page7_Vol1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Vol1\Page6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\PageMainImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Vol2\Page1_Vol2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
@@ -174,28 +189,28 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Page1\Page1_1.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_1.xaml.cs">
       <DependentUpon>Page1_1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page1\Page1_2.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_2.xaml.cs">
       <DependentUpon>Page1_2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page1\Page1_3.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_3.xaml.cs">
       <DependentUpon>Page1_3.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page1\Page1_4.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_4.xaml.cs">
       <DependentUpon>Page1_4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page1\Page1_5.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_5.xaml.cs">
       <DependentUpon>Page1_5.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page1\Page1_6.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_6.xaml.cs">
       <DependentUpon>Page1_6.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page1\Page1_7.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_7.xaml.cs">
       <DependentUpon>Page1_7.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page1\Page1_Main.xaml.cs">
+    <Compile Include="Pages\Vol1\Page1\Page1_Main.xaml.cs">
       <DependentUpon>Page1_Main.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageMainImage.xaml.cs">
@@ -312,6 +327,47 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\page2Pics\Схема михайлов2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page1_Vol2Pics\Схема САР-1.jpg" />
+    <Resource Include="Resources\page1_Vol2Pics\Схема САР-2.jpg" />
+    <Resource Include="Resources\page1_Vol2Pics\Схема САР-3.jpg" />
+    <Resource Include="Resources\page1_Vol2Pics\Схема САР-4.jpg" />
+    <Resource Include="Resources\page1_Vol2Pics\Схема САР-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page1_Vol2Pics\Улучшение САР.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page1_Vol2Pics\САР кнопка -1.jpg" />
+    <Resource Include="Resources\page1_Vol2Pics\САР кнопка -2.jpg" />
+    <Resource Include="Resources\page1_Vol2Pics\САР кнопка -3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page2_Vol2Pics\по возмущению апериодическое с фильтром.png" />
+    <Resource Include="Resources\page2_Vol2Pics\по возмущению апериодическое.png" />
+    <Resource Include="Resources\page2_Vol2Pics\по возмущению колебательное с фильтром.png" />
+    <Resource Include="Resources\page2_Vol2Pics\по возмущению колебательное.png" />
+    <Resource Include="Resources\page2_Vol2Pics\по отклонению апериодическое с фильтром.png" />
+    <Resource Include="Resources\page2_Vol2Pics\по отклонению апериодическое.png" />
+    <Resource Include="Resources\page2_Vol2Pics\по отклонению колебательное с фильтром.png" />
+    <Resource Include="Resources\page2_Vol2Pics\по отклонению колебательное.png" />
+    <Resource Include="Resources\page2_Vol2Pics\разомкнутое апериодическое с фильтром.png" />
+    <Resource Include="Resources\page2_Vol2Pics\разомкнутое апериодическое.png" />
+    <Resource Include="Resources\page2_Vol2Pics\разомкнутое колебательное с фильтром.png" />
+    <Resource Include="Resources\page2_Vol2Pics\разомкнутое колебательное.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page2_Vol2Pics\фильтр.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page2_Vol2Pics\колебательное-блок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page2_Vol2Pics\апериодическое_блок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\page7_Vol1Pics\Анализ устойчивости двух взаимосвязанных систем Схема.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

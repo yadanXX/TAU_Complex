@@ -13,8 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TAU_Complex.Pages.Page1;
-using TAU_Complex.Pages;
+using TAU_Complex.Pages.Vol1.Page1;
+using TAU_Complex.Pages.Vol1;
+using TAU_Complex.Pages.Vol2;
 
 namespace TAU_Complex
 {
@@ -29,6 +30,8 @@ namespace TAU_Complex
         private Page page4 = new Page4();
         private Page page5 = new Page5();
         private Page page6 = new Page6();
+        private Page page7_Vol1 = new Page7_Vol1();
+        private Page Page1_Vol2 = new Page1_Vol2();
 
         public MainWindow()
         {
@@ -39,28 +42,49 @@ namespace TAU_Complex
         {
             switch ((sender as RadioButton).Name)
             {
-                case "button1":
+                case "Button_1_FirstVol":
                     MainPanel.Content = page1;
                     break;
-                case "button2":
+                case "Button_2_FirstVol":
                     MainPanel.Content = page2;
                     break;
-                case "button3":
+                case "Button_3_FirstVol":
                     MainPanel.Content = page3;
                     break;
-                case "button4":
+                case "Button_4_FirstVol":
                     MainPanel.Content = page4;
                     break;
-                case "button5":
+                case "Button_5_FirstVol":
                     MainPanel.Content = page5;
                     break;
-                case "button6":
+                case "Button_6_FirstVol":
                     MainPanel.Content = page6;
+                    break; 
+                case "Button_7_FirstVol":
+                    MainPanel.Content = page7_Vol1;
+                    break;
+                case "Button_1_SecondVol":
+                    MainPanel.Content = Page1_Vol2;
                     break;
 
             }
         }
+        private void Button_Choose_Checked(object sender, RoutedEventArgs e)
+        {
+            switch ((sender as RadioButton).Name)
+            {
+                case "Button_Choose_FirstVol":
+                    FirstVol_StackPanel.Visibility = Visibility.Visible;
+                    SecondVol_StackPanel.Visibility = Visibility.Collapsed;
+                    break;
+                case "Button_Choose_SecondVol":
+                    SecondVol_StackPanel.Visibility = Visibility.Visible;
+                    FirstVol_StackPanel.Visibility = Visibility.Collapsed;
+                    break;                
 
+            }
+        }
+       
         #region Кнопки закрытия и перетаскивания
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -106,8 +130,9 @@ namespace TAU_Complex
             }
 
         }
+
         #endregion
 
-
+       
     }
 }
