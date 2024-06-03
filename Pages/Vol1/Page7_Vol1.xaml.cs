@@ -54,13 +54,31 @@ namespace TAU_Complex.Pages.Vol1
             List<DataPoint> dataPoints1 = new List<DataPoint>();
             List<DataPoint> dataPoints2 = new List<DataPoint>();
 
+            double xv = 1;
+            double sv1 = 0, sv2 = 0, sv3 = 0, sv4 = 0;
+            double a = 0, b = 0, c = 0, d = 0;
+            double wv1 = 0, wv2 = 0;
+            double temp11 = 0, temp12 = 0, temp21 = 0, temp22 = 0;
             for (double i = 0; i < tk; i += Dt)
             {
+                sv1 = xv - wv1;
+                sv3 = xv - wv2;
 
-                //(wv1, temp11, temp12) = WLink.Integrating(wv2 + wv3, K1, T1, temp11, temp12, Dt);
-                //dataPoints1.Add(new DataPoint(i, wv1));
+                a = Math.Cos(sv1);
+                c = -Math.Sin(sv1);
+                b = -Math.Sin(sv3);
+                d = -Math.Sin(sv3);
+
+                sv2 = a + b;
+                sv4 = c + d;
+
+                (wv1,temp11,temp12) = WLink.Integrating(sv2, K1, T1,temp11,temp12,Dt);
+                (wv2,temp21,temp22) = WLink.Integrating(sv4, K2, T2,temp21,temp22,Dt);
+                             
+                dataPoints1.Add(new DataPoint(i, wv1));
+                dataPoints2.Add(new DataPoint(i, wv2));
             }
-            plotView1.Model = Utils.GetLinearPlotModel("График переходной характеристики", dataPoints1, "t", "Qвых(t)");
+            plotView1.Model = Utils.GetLinearPlotModel("График переходной характеристики", dataPoints1, "t", "Q1вых(t)");
             plotView2.Model = Utils.GetLinearPlotModel("График переходной характеристики", dataPoints2, "t", "Q2вых(t)");
         }
     }
