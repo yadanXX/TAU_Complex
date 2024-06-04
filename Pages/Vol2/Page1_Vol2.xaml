@@ -32,7 +32,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Image x:Name="Model_Image"
-            Source="/Resources/Page1_Vol2Pics/Схема САР-1.jpg"
+            Source="/Resources/Vol2/Page1_Vol2Pics/Схема САР-1.jpg"
                Grid.Row="0"
                Grid.Column="0"
                Grid.ColumnSpan="2" />
@@ -63,15 +63,16 @@
             </GroupBox>
             <GroupBox Header="Обьект регулирования"
                       x:Name="Object_GroupBox"
-                      Visibility="Collapsed">
+                      Visibility="Visible">
                 <StackPanel Orientation="Horizontal">
                     <RadioButton x:Name="Pic_Radiobuttom_1"
                                  Height="55"
                                  VerticalContentAlignment="Center"
                                  Checked="RadioButton_Checked">
                         <RadioButton.Content>
-                            <Image Source="/Resources/Page1_Vol2Pics/САР кнопка -1.jpg"
-                                   Stretch="Uniform" />
+                            <Image
+                                Source="/Resources/Vol2/page1_Vol2Pics/САР кнопка -1.jpg"
+                                Stretch="Uniform" />
                         </RadioButton.Content>
                     </RadioButton>
                     <RadioButton x:Name="Pic_Radiobuttom_2"
@@ -79,7 +80,8 @@
                                  VerticalContentAlignment="Center"
                                  Checked="RadioButton_Checked">
                         <RadioButton.Content>
-                            <Image Source="/Resources/Page1_Vol2Pics/САР кнопка -2.jpg"
+                            <Image
+                                Source="/Resources/Vol2/page1_Vol2Pics/САР кнопка -2.jpg"
                                    Stretch="Uniform" />
                         </RadioButton.Content>
                     </RadioButton>
@@ -88,7 +90,8 @@
                                  VerticalContentAlignment="Center"
                                  Checked="RadioButton_Checked">
                         <RadioButton.Content>
-                            <Image Source="/Resources/Page1_Vol2Pics/САР кнопка -3.jpg"
+                            <Image
+                                Source="/Resources/Vol2/page1_Vol2Pics/САР кнопка -3.jpg"
                                    Stretch="Uniform" />
                         </RadioButton.Content>
                     </RadioButton>

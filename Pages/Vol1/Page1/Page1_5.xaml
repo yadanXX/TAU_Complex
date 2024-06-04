@@ -19,7 +19,7 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Image Source="/Resources/page1Pics/Идеально интегрирующие.png"
+        <Image Source="/Resources/Vol1/page1Pics/Идеально интегрирующие.png"
                HorizontalAlignment="Center"
                VerticalAlignment="Center" />
         <Canvas Margin="10,10,0,0"

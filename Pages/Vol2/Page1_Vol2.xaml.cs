@@ -205,14 +205,14 @@ namespace TAU_Complex.Pages.Vol2
             switch (modelNumber)
             {
                 case 0:
-                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Page1_Vol2Pics/Схема САР-1.jpg", UriKind.Relative));
+                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Vol2/page1_Vol2Pics/Схема САР-1.jpg", UriKind.Relative));
                     CollapseAllVariables();
                     StackPanel_K1.Visibility = Visibility.Visible;
                     StackPanel_K2.Visibility = Visibility.Visible;
                     StackPanel_T1.Visibility = Visibility.Visible;
                     break;
                 case 1:
-                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Page1_Vol2Pics/Схема САР-2.jpg", UriKind.Relative));
+                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Vol2/page1_Vol2Pics/Схема САР-2.jpg", UriKind.Relative));
                     CollapseAllVariables();
                     StackPanel_K1.Visibility = Visibility.Visible;
                     StackPanel_K2.Visibility = Visibility.Visible;
@@ -221,7 +221,7 @@ namespace TAU_Complex.Pages.Vol2
                     StackPanel_Tnu.Visibility = Visibility.Visible;
                     break;
                 case 2:
-                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Page1_Vol2Pics/Схема САР-3.jpg", UriKind.Relative));
+                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Vol2/page1_Vol2Pics/Схема САР-3.jpg", UriKind.Relative));
                     CollapseAllVariables();
                     StackPanel_K1.Visibility = Visibility.Visible;
                     StackPanel_K2.Visibility = Visibility.Visible;
@@ -229,7 +229,7 @@ namespace TAU_Complex.Pages.Vol2
                     StackPanel_T1.Visibility = Visibility.Visible;
                     break;
                 case 3:
-                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Page1_Vol2Pics/Схема САР-4.jpg", UriKind.Relative));
+                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Vol2/page1_Vol2Pics/Схема САР-4.jpg", UriKind.Relative));
                     CollapseAllVariables();
                     StackPanel_K1.Visibility = Visibility.Visible;
                     StackPanel_K2.Visibility = Visibility.Visible;
@@ -239,7 +239,7 @@ namespace TAU_Complex.Pages.Vol2
 
                     break;
                 case 4:
-                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Page1_Vol2Pics/Схема САР-5.jpg", UriKind.Relative));
+                    Model_Image.Source = new BitmapImage(new Uri("/Resources/Vol2/page1_Vol2Pics/Схема САР-5.jpg", UriKind.Relative));
                     CollapseAllVariables();
                     StackPanel_K1.Visibility = Visibility.Visible;
                     StackPanel_K2.Visibility = Visibility.Visible;

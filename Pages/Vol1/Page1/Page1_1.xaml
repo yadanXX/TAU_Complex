@@ -18,7 +18,7 @@
             <RowDefinition />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <Image Source="/Resources/page1Pics/Идеальное усилительное безынерционное.png"
+        <Image Source="/Resources/Vol1/page1Pics/Идеальное усилительное безынерционное.png"
                 VerticalAlignment="Bottom" />
         <Canvas Margin="10,10,0,0"
                 HorizontalAlignment="Left"

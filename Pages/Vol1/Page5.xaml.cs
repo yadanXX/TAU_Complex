@@ -138,19 +138,19 @@ namespace TAU_Complex.Pages.Vol1
             {
                 textBoxK.IsEnabled = true;
                 textBoxTky.IsEnabled = false;
-                SchemePic.Source = new BitmapImage(new Uri("pack://application:,,,/TAU_Complex;component/Resources/page5Pics/Схема точности1.jpg"));
+                SchemePic.Source = new BitmapImage(new Uri("pack://application:,,,/TAU_Complex;component/Resources/Vol1/page5Pics/Схема точности1.jpg"));
             }
 
             if ((bool)(radioButtonDif).IsChecked)
             {
                 textBoxTky.IsEnabled = true;
-                SchemePic.Source = new BitmapImage(new Uri("pack://application:,,,/TAU_Complex;component/Resources/page5Pics/Схема точности2.jpg"));
+                SchemePic.Source = new BitmapImage(new Uri("pack://application:,,,/TAU_Complex;component/Resources/Vol1/page5Pics/Схема точности2.jpg"));
             }            
 
             if ((bool)(radioButtonExo).IsChecked)
             {
                 textBoxTky.IsEnabled = true;
-                SchemePic.Source = new BitmapImage(new Uri("pack://application:,,,/TAU_Complex;component/Resources/page5Pics/Схема точности3.jpg"));
+                SchemePic.Source = new BitmapImage(new Uri("pack://application:,,,/TAU_Complex;component/Resources/Vol1/page5Pics/Схема точности3.jpg"));
             }
 
         }

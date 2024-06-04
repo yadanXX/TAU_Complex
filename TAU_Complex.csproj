@@ -90,6 +90,9 @@
     <Compile Include="Pages\Vol1\Page6.xaml.cs">
       <DependentUpon>Page6.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Vol2\Page2_Vol2.xaml.cs">
+      <DependentUpon>Page2_Vol2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Vol2\Page1_Vol2.xaml.cs">
       <DependentUpon>Page1_Vol2.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
     <Page Include="Pages\PageMainImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Vol2\Page2_Vol2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\Vol2\Page1_Vol2.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -268,106 +275,106 @@
     <Resource Include="Resources\icons\slide_button_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page1Pics\Апериодическое второго порядка.png" />
-    <Resource Include="Resources\page1Pics\Апериодическое звено ворого порядка.png" />
-    <Resource Include="Resources\page1Pics\Апериодическое инерционное .png" />
-    <Resource Include="Resources\page1Pics\Апериодическое инерционное.png" />
-    <Resource Include="Resources\page1Pics\Идеально интегрирующие.png" />
-    <Resource Include="Resources\page1Pics\Идеальное интегрирующие.png" />
-    <Resource Include="Resources\page1Pics\Идеальное усилительное безынерционное.png" />
-    <Resource Include="Resources\page1Pics\Идеальное усилительное.png" />
-    <Resource Include="Resources\page1Pics\Инерционно дифферинцирующие .png" />
-    <Resource Include="Resources\page1Pics\Инерционное дифферинцирующие.png" />
-    <Resource Include="Resources\page1Pics\Инерционное реально интегрирующие.png" />
-    <Resource Include="Resources\page1Pics\инерционное реальное интегрирующие.png" />
-    <Resource Include="Resources\page1Pics\Колебательное звено.png" />
-    <Resource Include="Resources\page1Pics\Колебательное.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Апериодическое второго порядка.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Апериодическое звено ворого порядка.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Апериодическое инерционное .png" />
+    <Resource Include="Resources\Vol1\page1Pics\Апериодическое инерционное.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Идеально интегрирующие.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Идеальное интегрирующие.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Идеальное усилительное безынерционное.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Идеальное усилительное.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Инерционно дифферинцирующие .png" />
+    <Resource Include="Resources\Vol1\page1Pics\Инерционное дифферинцирующие.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Инерционное реально интегрирующие.png" />
+    <Resource Include="Resources\Vol1\page1Pics\инерционное реальное интегрирующие.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Колебательное звено.png" />
+    <Resource Include="Resources\Vol1\page1Pics\Колебательное.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page2Pics\Схема михайлов.jpg" />
+    <Resource Include="Resources\Vol1\page2Pics\Схема михайлов.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page2Pics\Михайлов.png" />
+    <Resource Include="Resources\Vol1\page2Pics\Михайлов.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page3Pics\схема найквист.jpg" />
+    <Resource Include="Resources\Vol1\page3Pics\схема найквист.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page3Pics\найквист.png" />
+    <Resource Include="Resources\Vol1\page3Pics\найквист.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page5Pics\Схема точности.jpg" />
+    <Resource Include="Resources\Vol1\page5Pics\Схема точности.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page4Pics\запаздывание.png" />
+    <Resource Include="Resources\Vol1\page4Pics\запаздывание.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page4Pics\Схема запаздывания.jpg" />
+    <Resource Include="Resources\Vol1\page4Pics\Схема запаздывания.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page5Pics\точность.png" />
+    <Resource Include="Resources\Vol1\page5Pics\точность.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page5Pics\Схема точности1.jpg" />
+    <Resource Include="Resources\Vol1\page5Pics\Схема точности1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page5Pics\Схема точности2.jpg" />
+    <Resource Include="Resources\Vol1\page5Pics\Схема точности2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page5Pics\Схема точности3.jpg" />
+    <Resource Include="Resources\Vol1\page5Pics\Схема точности3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page6Pics\схема инвариатность.jpg" />
+    <Resource Include="Resources\Vol1\page6Pics\схема инвариатность.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page6Pics\Инвариантность.png" />
+    <Resource Include="Resources\Vol1\page6Pics\Инвариантность.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page3Pics\схема найквист2.jpg" />
+    <Resource Include="Resources\Vol1\page3Pics\схема найквист2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page2Pics\Схема михайлов2.jpg" />
+    <Resource Include="Resources\Vol1\page2Pics\Схема михайлов2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page1_Vol2Pics\Схема САР-1.jpg" />
-    <Resource Include="Resources\page1_Vol2Pics\Схема САР-2.jpg" />
-    <Resource Include="Resources\page1_Vol2Pics\Схема САР-3.jpg" />
-    <Resource Include="Resources\page1_Vol2Pics\Схема САР-4.jpg" />
-    <Resource Include="Resources\page1_Vol2Pics\Схема САР-5.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-1.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-2.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-3.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-4.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page1_Vol2Pics\Улучшение САР.png" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\Улучшение САР.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page1_Vol2Pics\САР кнопка -1.jpg" />
-    <Resource Include="Resources\page1_Vol2Pics\САР кнопка -2.jpg" />
-    <Resource Include="Resources\page1_Vol2Pics\САР кнопка -3.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\САР кнопка -1.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\САР кнопка -2.jpg" />
+    <Resource Include="Resources\Vol2\page1_Vol2Pics\САР кнопка -3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page2_Vol2Pics\по возмущению апериодическое с фильтром.png" />
-    <Resource Include="Resources\page2_Vol2Pics\по возмущению апериодическое.png" />
-    <Resource Include="Resources\page2_Vol2Pics\по возмущению колебательное с фильтром.png" />
-    <Resource Include="Resources\page2_Vol2Pics\по возмущению колебательное.png" />
-    <Resource Include="Resources\page2_Vol2Pics\по отклонению апериодическое с фильтром.png" />
-    <Resource Include="Resources\page2_Vol2Pics\по отклонению апериодическое.png" />
-    <Resource Include="Resources\page2_Vol2Pics\по отклонению колебательное с фильтром.png" />
-    <Resource Include="Resources\page2_Vol2Pics\по отклонению колебательное.png" />
-    <Resource Include="Resources\page2_Vol2Pics\разомкнутое апериодическое с фильтром.png" />
-    <Resource Include="Resources\page2_Vol2Pics\разомкнутое апериодическое.png" />
-    <Resource Include="Resources\page2_Vol2Pics\разомкнутое колебательное с фильтром.png" />
-    <Resource Include="Resources\page2_Vol2Pics\разомкнутое колебательное.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению апериодическое с фильтром.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению апериодическое.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению колебательное с фильтром.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению колебательное.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению апериодическое с фильтром.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению апериодическое.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению колебательное с фильтром.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению колебательное.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое апериодическое с фильтром.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое апериодическое.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое колебательное с фильтром.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое колебательное.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page2_Vol2Pics\фильтр.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\фильтр.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page2_Vol2Pics\колебательное-блок.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\колебательное-блок.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page2_Vol2Pics\апериодическое_блок.png" />
+    <Resource Include="Resources\Vol2\page2_Vol2Pics\апериодическое_блок.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\page7_Vol1Pics\Анализ устойчивости двух взаимосвязанных систем Схема.png" />
+    <Resource Include="Resources\Vol1\page7_Vol1Pics\Анализ устойчивости двух взаимосвязанных систем Схема.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

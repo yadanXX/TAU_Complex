@@ -32,6 +32,7 @@ namespace TAU_Complex
         private Page page6 = new Page6();
         private Page page7_Vol1 = new Page7_Vol1();
         private Page Page1_Vol2 = new Page1_Vol2();
+        private Page Page2_Vol2 = new Page2_Vol2();
 
         public MainWindow()
         {
@@ -65,6 +66,9 @@ namespace TAU_Complex
                     break;
                 case "Button_1_SecondVol":
                     MainPanel.Content = Page1_Vol2;
+                    break;
+                case "Button_2_SecondVol":
+                    MainPanel.Content = Page2_Vol2;
                     break;
 
             }

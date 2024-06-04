@@ -20,7 +20,7 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Image Source="/Resources/page2Pics/Схема михайлов2.jpg"
+        <Image Source="/Resources/Vol1/page2Pics/Схема михайлов2.jpg"
                Grid.Row="0"
                Grid.Column="0"
                Grid.ColumnSpan="2" />

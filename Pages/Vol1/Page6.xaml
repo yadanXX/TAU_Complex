@@ -26,7 +26,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Image Source="/Resources/page6Pics/схема инвариатность.jpg"
+        <Image Source="/Resources/Vol1/page6Pics/схема инвариатность.jpg"
                Grid.Row="0"
                Grid.Column="0"
                Grid.ColumnSpan="2" />

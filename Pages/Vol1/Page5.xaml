@@ -26,7 +26,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Image Name="SchemePic"
-               Source="/Resources/page5Pics/Схема точности.jpg"
+               Source="/Resources/Vol1/page5Pics/Схема точности.jpg"
                Grid.Row="0"
                Grid.Column="0"
                Grid.ColumnSpan="2" />

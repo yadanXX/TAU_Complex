@@ -37,7 +37,7 @@
                 Height="*" />
         </Grid.RowDefinitions>
         <Image
-            Source="/Resources/page7_Vol1Pics/Анализ устойчивости двух взаимосвязанных систем Схема.png"
+            Source="/Resources/Vol1/page7_Vol1Pics/Анализ устойчивости двух взаимосвязанных систем Схема.png"
             Grid.Row="0"
             Grid.Column="0"
             Grid.ColumnSpan="2" />
