@@ -30,7 +30,7 @@
             <RowDefinition
                 Height="200"
                 MinHeight="50"
-                MaxHeight="400"/>
+                MaxHeight="400" />
             <RowDefinition
                 Height="Auto" />
             <RowDefinition
@@ -166,6 +166,36 @@
                             Canvas.Top="11" />
                         <TextBox
                             x:Name="textBoxT2"
+                            Margin="30,0,0,0"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="101" />
+                    </Canvas>
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <Canvas
+                        Margin="10"
+                        HorizontalAlignment="Left"
+                        Width="20"
+                        Height="24"
+                        VerticalAlignment="Top">
+                        <TextBlock
+                            Style="{StaticResource ResourceKey=canvasLeft}"
+                            Text="y"
+                            HorizontalAlignment="Center"
+                            Height="26"
+                            VerticalAlignment="Top"
+                            Canvas.Top="-4" />
+                        <TextBlock
+                            Style="{StaticResource ResourceKey=canvasBot}"
+                            Text=""
+                            Canvas.Left="9"
+                            Canvas.Top="11" />
+                        <TextBox
+                            x:Name="textBoxY"
                             Margin="30,0,0,0"
                             FontSize="16"
                             Height="24"

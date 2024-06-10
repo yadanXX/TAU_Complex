@@ -71,7 +71,7 @@
                                  Checked="RadioButton_Checked">
                         <RadioButton.Content>
                             <Image
-                                Source="/Resources/Vol2/page1_Vol2Pics/САР кнопка -1.jpg"
+                                Source="/Resources/Vol2/Page1_Vol2Pics/САР кнопка -1.jpg"
                                 Stretch="Uniform" />
                         </RadioButton.Content>
                     </RadioButton>
@@ -81,7 +81,7 @@
                                  Checked="RadioButton_Checked">
                         <RadioButton.Content>
                             <Image
-                                Source="/Resources/Vol2/page1_Vol2Pics/САР кнопка -2.jpg"
+                                Source="/Resources/Vol2/Page1_Vol2Pics/САР кнопка -2.jpg"
                                    Stretch="Uniform" />
                         </RadioButton.Content>
                     </RadioButton>
@@ -91,7 +91,7 @@
                                  Checked="RadioButton_Checked">
                         <RadioButton.Content>
                             <Image
-                                Source="/Resources/Vol2/page1_Vol2Pics/САР кнопка -3.jpg"
+                                Source="/Resources/Vol2/Page1_Vol2Pics/САР кнопка -3.jpg"
                                    Stretch="Uniform" />
                         </RadioButton.Content>
                     </RadioButton>

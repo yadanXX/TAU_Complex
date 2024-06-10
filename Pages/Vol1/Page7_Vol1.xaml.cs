@@ -32,15 +32,16 @@ namespace TAU_Complex.Pages.Vol1
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            double K1, K2, T1, T2, tk;
+            double K1, K2, T1, T2, tk, y;
             try
             {
                 K1 = Convert.ToDouble(textBoxK1.Text.Replace(".", ","));
                 K2 = Convert.ToDouble(textBoxK2.Text.Replace(".", ","));
                 T1 = Convert.ToDouble(textBoxT1.Text.Replace(".", ","));
                 T2 = Convert.ToDouble(textBoxT2.Text.Replace(".", ","));
+                y = Convert.ToDouble(textBoxY.Text.Replace(".", ","));
                 tk = Convert.ToDouble(textBoxtk.Text.Replace(".", ","));
-                if (tk <= 0 || K1 <= 0 || K2 <= 0 || T1 <= 0 || T2 <= 0 || tk <= 0) throw new Exception();
+                if (tk <= 0 || K1 <= 0 || K2 <= 0 || T1 <= 0 || T2 <= 0 || y <= 0 || tk <= 0) throw new Exception();
             }
             catch (Exception)
             {
@@ -64,17 +65,18 @@ namespace TAU_Complex.Pages.Vol1
                 sv1 = xv - wv1;
                 sv3 = xv - wv2;
 
-                a = Math.Cos(sv1);
-                c = -Math.Sin(sv1);
-                b = -Math.Sin(sv3);
-                d = -Math.Sin(sv3);
+                a = Math.Cos(y) * sv1;
+                c = -Math.Sin(y) * sv1;
+                b = Math.Sin(y) * sv3;
+                d = Math.Cos(y) * sv3;
 
                 sv2 = a + b;
                 sv4 = c + d;
 
-                (wv1,temp11,temp12) = WLink.Integrating(sv2, K1, T1,temp11,temp12,Dt);
-                (wv2,temp21,temp22) = WLink.Integrating(sv4, K2, T2,temp21,temp22,Dt);
-                             
+                (wv1, temp11, temp12) = WLink.Integrating(sv2, K1, T1, temp11, temp12, Dt);
+                (wv2, temp21, temp22) = WLink.Integrating(sv4, K2, T2, temp21, temp22, Dt);
+
+
                 dataPoints1.Add(new DataPoint(i, wv1));
                 dataPoints2.Add(new DataPoint(i, wv2));
             }

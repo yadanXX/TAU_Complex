@@ -54,7 +54,7 @@
                             Value="Right" />
                     </Style>
                 </Style.Resources>
-            </Style>           
+            </Style>
         </ResourceDictionary>
     </Page.Resources>
     <Grid>
@@ -100,7 +100,8 @@
                         x:Name="Pic_Radiobuttom_1"
                         Height="55"
                         VerticalContentAlignment="Center"
-                        Checked="RadioButton_Checked">
+                        Checked="RadioButton_Checked"
+                        IsChecked="True">
                         <RadioButton.Content>
                             <Image
                                 Source="/Resources/Vol2/Page2_Vol2Pics/апериодическое_блок.png"
@@ -160,12 +161,15 @@
                         Orientation="Horizontal">
                         <CheckBox
                             x:Name="Filter_CheckBox"
-                            VerticalContentAlignment="Center">
+                            VerticalContentAlignment="Center"
+                            Checked="Filter_CheckBox_Checked"
+                            Unchecked="Filter_CheckBox_Checked">
                             <Image
                                 Source="/Resources/Vol2/page2_Vol2Pics/фильтр.png" />
                         </CheckBox>
                         <StackPanel
-                            Orientation="Vertical">
+                            Orientation="Vertical"
+                            x:Name="StackPanel_FilterKT">
                             <StackPanel
                                 x:Name="StackPanel_KF"
                                 Orientation="Horizontal">
@@ -223,6 +227,7 @@
                         </StackPanel>
                     </StackPanel>
                     <StackPanel
+                        x:Name="StackPanel_Random"
                         Orientation="Vertical">
                         <StackPanel
                             Orientation="Vertical">
@@ -230,7 +235,9 @@
                                 Text="Случайное воздейсвие f(t)" />
                             <ComboBox
                                 x:Name="OutRage_ComboBox"
-                                Margin="3">
+                                Margin="3"
+                                SelectedIndex="0"
+                                SelectionChanged="OutRage_ComboBox_SelectionChanged">
                                 <TextBlock
                                     Text="Ступенчатое" />
                                 <TextBlock
@@ -240,42 +247,48 @@
                             </ComboBox>
                         </StackPanel>
                         <DockPanel
-                            Style="{StaticResource Random_DockPanel}">
+                            Style="{StaticResource Random_DockPanel}"
+                            x:Name="InvTime_DockPanel">
                             <TextBlock
                                 Text="Время возмущения" />
                             <TextBox
                                 x:Name="InvTime_TextBox" />
                         </DockPanel>
                         <DockPanel
-                            Style="{StaticResource Random_DockPanel}">
+                            Style="{StaticResource Random_DockPanel}"
+                            x:Name="Amplit_DockPanel">
                             <TextBlock
                                 Text="Амплитуда" />
                             <TextBox
                                 x:Name="Amplit_TextBox" />
                         </DockPanel>
                         <DockPanel
-                            Style="{StaticResource Random_DockPanel}">
+                            Style="{StaticResource Random_DockPanel}"
+                            x:Name="Frequency_DockPanel">
                             <TextBlock
                                 Text="Частота" />
                             <TextBox
                                 x:Name="Frequency_TextBox" />
                         </DockPanel>
                         <DockPanel
-                            Style="{StaticResource Random_DockPanel}">
+                            Style="{StaticResource Random_DockPanel}"
+                            x:Name="PointCount_DockPanel">
                             <TextBlock>
                                 Кол-во случайных <LineBreak /> значений</TextBlock>
                             <TextBox
                                 x:Name="PointCount_TextBox" />
                         </DockPanel>
                         <DockPanel
-                            Style="{StaticResource Random_DockPanel}">
+                            Style="{StaticResource Random_DockPanel}"
+                            x:Name="Expect_DockPanel">
                             <TextBlock>
     Математическое <LineBreak /> ожидание</TextBlock>
                             <TextBox
                                 x:Name="Expect_TextBox" />
                         </DockPanel>
                         <DockPanel
-                            Style="{StaticResource Random_DockPanel}">
+                            Style="{StaticResource Random_DockPanel}"
+                            x:Name="Dispertion_DockPanel">
                             <TextBlock
                                 Text="Дисперсия" />
                             <TextBox
@@ -332,33 +345,6 @@
                         </Canvas>
                         <TextBox
                             x:Name="textBoxK1"
-                            Margin="5,5,0,5"
-                            FontSize="16"
-                            Height="24"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left"
-                            Width="50" />
-                    </StackPanel>
-                    <StackPanel
-                        x:Name="StackPanel_K2"
-                        Orientation="Horizontal">
-                        <Canvas
-                            Margin="5,5,0,5"
-                            HorizontalAlignment="Left"
-                            Width="20"
-                            Height="24"
-                            VerticalAlignment="Top">
-                            <TextBlock
-                                Style="{StaticResource ResourceKey=canvasLeft}"
-                                Text="K" />
-                            <TextBlock
-                                Style="{StaticResource ResourceKey=canvasBot}"
-                                Text="2"
-                                Canvas.Left="9"
-                                Canvas.Top="11" />
-                        </Canvas>
-                        <TextBox
-                            x:Name="textBoxK2"
                             Margin="5,5,0,5"
                             FontSize="16"
                             Height="24"
@@ -447,7 +433,6 @@
                             HorizontalAlignment="Left"
                             Width="50" />
                     </StackPanel>
-                    
                 </StackPanel>
                 <StackPanel
                     Grid.Column="2">

@@ -336,42 +336,42 @@
     <Resource Include="Resources\Vol1\page2Pics\Схема михайлов2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-1.jpg" />
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-2.jpg" />
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-3.jpg" />
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-4.jpg" />
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\Схема САР-5.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\Схема САР-1.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\Схема САР-2.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\Схема САР-3.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\Схема САР-4.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\Схема САР-5.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\Улучшение САР.png" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\Улучшение САР.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\САР кнопка -1.jpg" />
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\САР кнопка -2.jpg" />
-    <Resource Include="Resources\Vol2\page1_Vol2Pics\САР кнопка -3.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\САР кнопка -1.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\САР кнопка -2.jpg" />
+    <Resource Include="Resources\Vol2\Page1_Vol2Pics\САР кнопка -3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению апериодическое с фильтром.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению апериодическое.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению колебательное с фильтром.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по возмущению колебательное.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению апериодическое с фильтром.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению апериодическое.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению колебательное с фильтром.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\по отклонению колебательное.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое апериодическое с фильтром.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое апериодическое.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое колебательное с фильтром.png" />
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\разомкнутое колебательное.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по возмущению апериодическое с фильтром.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по возмущению апериодическое.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по возмущению колебательное с фильтром.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по возмущению колебательное.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по отклонению апериодическое с фильтром.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по отклонению апериодическое.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по отклонению колебательное с фильтром.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\по отклонению колебательное.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\разомкнутое апериодическое с фильтром.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\разомкнутое апериодическое.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\разомкнутое колебательное с фильтром.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\разомкнутое колебательное.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\фильтр.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\фильтр.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\колебательное-блок.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\колебательное-блок.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Vol2\page2_Vol2Pics\апериодическое_блок.png" />
+    <Resource Include="Resources\Vol2\Page2_Vol2Pics\апериодическое_блок.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Vol1\page7_Vol1Pics\Анализ устойчивости двух взаимосвязанных систем Схема.png" />
