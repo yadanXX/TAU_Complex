@@ -49,6 +49,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -89,6 +90,9 @@
     </Compile>
     <Compile Include="Pages\Vol1\Page6.xaml.cs">
       <DependentUpon>Page6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Vol2\Page3_Vol2.xaml.cs">
+      <DependentUpon>Page3_Vol2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Vol2\Page2_Vol2.xaml.cs">
       <DependentUpon>Page2_Vol2.xaml</DependentUpon>
@@ -161,6 +165,10 @@
     <Page Include="Pages\PageMainImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Vol2\Page3_Vol2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\Vol2\Page2_Vol2.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -375,6 +383,20 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Vol1\page7_Vol1Pics\Анализ устойчивости двух взаимосвязанных систем Схема.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page3_Vol2Pics\апериодическое-блок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page3_Vol2Pics\интегрирующее с запаздыванием-блок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page3_Vol2Pics\интегрирующие-блок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page3_Vol2Pics\cхема с апериодическим.png" />
+    <Resource Include="Resources\Vol2\Page3_Vol2Pics\cхема с интегрирующим.png" />
+    <Resource Include="Resources\Vol2\Page3_Vol2Pics\cхема с колебательным.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

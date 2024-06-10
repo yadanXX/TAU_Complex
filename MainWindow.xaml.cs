@@ -33,6 +33,7 @@ namespace TAU_Complex
         private Page page7_Vol1 = new Page7_Vol1();
         private Page Page1_Vol2 = new Page1_Vol2();
         private Page Page2_Vol2 = new Page2_Vol2();
+        private Page Page3_Vol2 = new Page3_Vol2();
 
         public MainWindow()
         {
@@ -60,7 +61,7 @@ namespace TAU_Complex
                     break;
                 case "Button_6_FirstVol":
                     MainPanel.Content = page6;
-                    break; 
+                    break;
                 case "Button_7_FirstVol":
                     MainPanel.Content = page7_Vol1;
                     break;
@@ -69,6 +70,9 @@ namespace TAU_Complex
                     break;
                 case "Button_2_SecondVol":
                     MainPanel.Content = Page2_Vol2;
+                    break;
+                case "Button_3_SecondVol":
+                    MainPanel.Content = Page3_Vol2;
                     break;
 
             }
@@ -84,11 +88,11 @@ namespace TAU_Complex
                 case "Button_Choose_SecondVol":
                     SecondVol_StackPanel.Visibility = Visibility.Visible;
                     FirstVol_StackPanel.Visibility = Visibility.Collapsed;
-                    break;                
+                    break;
 
             }
         }
-       
+
         #region Кнопки закрытия и перетаскивания
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -137,6 +141,6 @@ namespace TAU_Complex
 
         #endregion
 
-       
+
     }
 }

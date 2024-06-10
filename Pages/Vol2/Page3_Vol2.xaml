@@ -1,0 +1,372 @@
+﻿<Page
+    x:Class="TAU_Complex.Pages.Vol2.Page3_Vol2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:TAU_Complex.Pages.Vol2"
+    mc:Ignorable="d"
+    xmlns:oxy="http://oxyplot.org/wpf"
+    d:DesignHeight="658.448"
+    d:DesignWidth="730.865">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/Styles/Variables.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style
+                x:Key="Radio"
+                TargetType="RadioButton">
+                <Setter
+                    Property="Margin"
+                    Value="0,5,0,5" />
+                <Setter
+                    Property="FontSize"
+                    Value="14" />
+            </Style>
+            <Style
+                x:Key="Random_DockPanel"
+                TargetType="DockPanel">
+                <Style.Resources>
+                    <Style
+                        TargetType="TextBlock">
+                        <Setter
+                            Property="VerticalAlignment"
+                            Value="Center" />
+                        <Setter
+                            Property="DockPanel.Dock"
+                            Value="Left" />
+                    </Style>
+                    <Style
+                        TargetType="TextBox">
+                        <Setter
+                            Property="Margin"
+                            Value="5,5,5,5" />
+                        <Setter
+                            Property="FontSize"
+                            Value="16" />
+                        <Setter
+                            Property="Height"
+                            Value="24" />
+                        <Setter
+                            Property="DockPanel.Dock"
+                            Value="Right" />
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="374" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="150" />
+            <RowDefinition
+                Height="271*" />
+            <RowDefinition
+                Height="237*" />
+        </Grid.RowDefinitions>
+        <Image
+            x:Name="Model_Image"
+            Source="/Resources/Vol2/Page3_Vol2Pics/cхема с апериодическим.png"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2" />
+        <oxy:PlotView
+            x:Name="plotView1"
+            Grid.Row="1"
+            Grid.Column="1" />
+        <oxy:PlotView
+            x:Name="plotView2"
+            Grid.Row="2"
+            Grid.Column="1" />
+        <Grid
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="Auto" />
+            </Grid.RowDefinitions>
+            <GroupBox
+                Header="Обьект регулирования"
+                x:Name="Object_GroupBox">
+                <StackPanel
+                    Orientation="Vertical">
+                    <RadioButton
+                        x:Name="Pic_Radiobuttom_1"
+                        Height="55"
+                        VerticalContentAlignment="Center"
+                        Checked="RadioButton_Checked"
+                        IsChecked="True"
+                        Margin="5">
+                        <RadioButton.Content>
+                            <Image
+                                Source="/Resources/Vol2/Page3_Vol2Pics/апериодическое-блок.png"
+                                Stretch="Uniform" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton
+                        x:Name="Pic_Radiobuttom_2"
+                        Height="55"
+                        VerticalContentAlignment="Center"
+                        Checked="RadioButton_Checked"
+                        Margin="5">
+                        <RadioButton.Content>
+                            <Image
+                                Source="/Resources/Vol2/Page3_Vol2Pics/интегрирующее с запаздыванием-блок.png"
+                                Stretch="Uniform" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton
+                        x:Name="Pic_Radiobuttom_3"
+                        Height="55"
+                        VerticalContentAlignment="Center"
+                        Checked="RadioButton_Checked"
+                        Margin="5">
+                        <RadioButton.Content>
+                            <Image
+                                Source="/Resources/Vol2/Page3_Vol2Pics/интегрирующие-блок.png"
+                                Stretch="Uniform" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <Grid
+                Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    Grid.Column="0">
+                    <StackPanel
+                        x:Name="StackPanel_K1"
+                        Orientation="Horizontal">
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="K" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text="1"
+                                Canvas.Left="9"
+                                Canvas.Top="11" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxK1"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="50" />
+                    </StackPanel>
+                    <StackPanel
+                        x:Name="StackPanel_K2"
+                        Orientation="Horizontal">
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="K" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text="2"
+                                Canvas.Left="9"
+                                Canvas.Top="11" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxK2"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="50" />
+                    </StackPanel>
+                    <StackPanel
+                        x:Name="StackPanel_tk"
+                        Orientation="Horizontal">
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="t" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text="k"
+                                Canvas.Left="9"
+                                Canvas.Top="11" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxtk"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="50" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel
+                    Grid.Column="2">
+                    <StackPanel
+                        x:Name="StackPanel_T1"
+                        Orientation="Horizontal">
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="T" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text="1"
+                                Canvas.Left="9"
+                                Canvas.Top="11" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxT1"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="50" />
+                    </StackPanel>
+                    <StackPanel
+                        x:Name="StackPanel_T2"
+                        Orientation="Horizontal">
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="T" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text="2"
+                                Canvas.Left="9"
+                                Canvas.Top="11" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxT2"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="50" />
+                    </StackPanel>
+                    <StackPanel
+                        x:Name="StackPanel_T3"
+                        Orientation="Horizontal">
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="T" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text="3"
+                                Canvas.Left="9"
+                                Canvas.Top="11" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxT3"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="50" />
+                    </StackPanel>
+                    <StackPanel
+                        x:Name="StackPanel_si"
+                        Orientation="Horizontal">
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="ξ" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text=""
+                                Canvas.Left="9"
+                                Canvas.Top="11" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxsi"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Width="50" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <StackPanel
+                Grid.Row="2">
+                <RadioButton
+                    x:Name="RadioButton_T"
+                    Content="Переходная хар-ка"
+                    Margin="5"
+                    IsChecked="True"
+                    FontSize="16"
+                    Checked="RadioButton_T_Checked"/>
+                <RadioButton
+                    x:Name="Radiobutton_Hz"
+                    Content="ЛАЧХ"
+                    Margin="5"
+                    FontSize="16" 
+                    Checked="RadioButton_T_Checked"/>
+            </StackPanel>
+            <Button
+                Style="{StaticResource ResourceKey=PlotButton}"
+                Grid.Row="3"
+                Click="Button_Click" />
+        </Grid>
+    </Grid>
+</Page>
