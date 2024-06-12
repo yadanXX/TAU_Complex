@@ -13,7 +13,7 @@ namespace TAU_Complex
         /// </summary>
         /// <param name="xv">Входной сигнал.</param>
         /// <param name="k">Коэффициент усиления.</param>
-        /// <returns></returns>
+        /// <returns>Выход</returns>
         public static double NonEnertion(double xv, double k)
         {
             return xv * k;
@@ -25,7 +25,7 @@ namespace TAU_Complex
         /// <param name="k">Коэффициент усиления.</param>
         /// <param name="x1">Предыдущий выход.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход</returns>
         public static double IdealInter(double xv, double k, double x1, double Dt)
         {
             return x1 + xv * Dt * k;
@@ -39,7 +39,7 @@ namespace TAU_Complex
         /// <param name="x1">Предыдущий выход1(промежуточный), после изменения текущий1.</param>
         /// <param name="x2">Предыдущий выход2(промежуточный), после изменения текущий2 x'.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход, Выход1, Выход2</returns>
         public static (double, double, double) Integrating(double xv, double k, double T, double x1, double x2, double Dt)
         {
             double x, x3;
@@ -57,7 +57,7 @@ namespace TAU_Complex
         /// <param name="T">Постоянная времени.</param>
         /// <param name="x1">Предыдущий выход1(промежуточный), после изменения текущий1.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход, Выход1</returns>
         public static (double, double) Aperiodic(double xv, double k, double T, double x1, double Dt)
         {
             double x, x2;
@@ -75,7 +75,7 @@ namespace TAU_Complex
         /// <param name="T1">Постоянная времени.</param>
         /// <param name="xi1">Предыдущий выход1(промежуточный), после изменения текущий1.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход, Выход1</returns>
         public static (double, double) Exodrom(double xv, double k, double T0, double T1, double xi1, double Dt)
         {
             double x;
@@ -93,7 +93,7 @@ namespace TAU_Complex
         /// <param name="x1">Предыдущий выход1(промежуточный), после изменения текущий1.</param>
         /// <param name="xi1">Предыдущий выход1'(промежуточно производный),после изменения текущий1'.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход, Выход1, Выход2</returns>
         public static (double, double, double) Oscillatory(double xv, double k, double T0, double T1, double x1, double xi1, double Dt)
         {
             xi1 = xi1 + (xv - T1 * xi1 - x1) * Dt / Math.Pow(T0, 2);
@@ -109,7 +109,7 @@ namespace TAU_Complex
         /// <param name="T1">Постоянная времени.</param>
         /// <param name="xi1">Предыдущий выход1(промежуточный), после изменения текущий1.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход, Выход1</returns>
         public static (double, double) Difdelay(double xv, double k, double T0, double T1, double xi1, double Dt)
         {
             double x;
@@ -124,7 +124,7 @@ namespace TAU_Complex
         /// <param name="k">Коэффициент усиления.</param>
         /// <param name="xi1">Предыдущий вход1(промежуточный), после изменения текущий1.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход, Выход1</returns>
         public static (double, double) Dif(double xv, double k, double xi1, double Dt)
         {
             double x;
@@ -141,7 +141,7 @@ namespace TAU_Complex
         /// <param name="T1">Постоянная времени.</param>
         /// <param name="xi1">Предыдущий выход1(промежуточный), после изменения текущий1.</param>
         /// <param name="Dt">Шаг дискретизации.</param>
-        /// <returns></returns>
+        /// <returns>Выход, Выход1</returns>
         public static (double, double) PropDifDelay(double xv, double k, double T0, double T1, double xi1, double Dt)
         {
             double x, xi1d1;
