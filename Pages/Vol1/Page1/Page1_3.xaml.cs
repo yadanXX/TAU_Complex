@@ -51,14 +51,18 @@ namespace TAU_Complex.Pages.Vol1.Page1
                 return;
             }
 
-            double Dt = Properties.Settings.Default.Dt;
+            //double Dt = Properties.Settings.Default.Dt;
             double T3, T4;
             T3 = T1 / 2.0 + Math.Sqrt(Math.Pow(T1, 2) / 4.0 - Math.Pow(T2, 2));
             T4 = T1 / 2.0 - Math.Sqrt(Math.Pow(T1, 2) / 4.0 - Math.Pow(T2, 2));
+
+            double Dt = Data.GetDt(new List<double> { T1, T2, T3,T4 }, tk);
+
             List<DataPoint> dataPoints = new List<DataPoint>();
             for (double i = 0; i < tk; i += Dt)
             {
-                dataPoints.Add(new DataPoint(i, k1 * (1.0 - T3 / (T3 - T4) * Math.Exp(-i / T3) + T4 / (T3 - T4) * Math.Exp(-i / T4))));
+                dataPoints.Add(new DataPoint(i, k1 * (1.0 - T3 / (T3 - T4) 
+                    * Math.Exp(-i / T3) + T4 / (T3 - T4) * Math.Exp(-i / T4))));
             }
             plotView.Model = Utils.GetLinearPlotModel("График переходной характеристики", dataPoints, "t", "Qвых(t)");
             thisModel = plotView.Model;

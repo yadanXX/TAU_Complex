@@ -47,8 +47,8 @@ namespace TAU_Complex.Pages.Vol1
                 T1 = Convert.ToDouble(textBoxT1.Text.Replace(".", ","));
                 T2 = Convert.ToDouble(textBoxT2.Text.Replace(".", ","));
                 tk = Convert.ToDouble(textBoxtk.Text.Replace(".", ","));
-                Wk = Convert.ToDouble(textBoxtk.Text.Replace(".", ","));
-                if (tk <= 0 || K1 <= 0 || K2 <= 0 || K3 <= 0 || T1 <= 0 || T2 <= 0) throw new Exception();
+                Wk = Convert.ToDouble(textBoxWk.Text.Replace(".", ","));
+                if (tk <= 0 || K1 <= 0 || K2 <= 0 || K3 <= 0 || T1 <= 0 || T2 <= 0 || Wk <= 0) throw new Exception();
             }
             catch (Exception)
             {
@@ -57,7 +57,9 @@ namespace TAU_Complex.Pages.Vol1
                 return;
             }
 
-            double Dt = Properties.Settings.Default.Dt;
+            //double Dt = Properties.Settings.Default.Dt;
+
+            double Dt = Data.GetDt(new List<double> { T1, T2 }, tk);
 
             List<DataPoint> dataPoints1 = new List<DataPoint>();
             List<DataPoint> dataPoints2 = new List<DataPoint>();
@@ -81,7 +83,7 @@ namespace TAU_Complex.Pages.Vol1
 
             plotView1.Model = Utils.GetLinearPlotModel("График переходной характеристики", dataPoints1, "t", "Qвых(t)");
             plotView2.Model = Utils.GetLinearPlotModel("Годограф Михайлова", dataPoints2, "u(w)", "jv(w)");
-            
+
         }
     }
 }

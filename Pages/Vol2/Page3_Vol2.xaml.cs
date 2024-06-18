@@ -30,7 +30,7 @@ namespace TAU_Complex.Pages.Vol2
         public Page3_Vol2()
         {
             InitializeComponent();
-            plotView1.Model = Utils.GetRootPlotModel("Карта корней", null,null, "Вещественная ось", "Мнимая ось");
+            plotView1.Model = Utils.GetRootPlotModel("Карта корней", null, null, "Вещественная ось", "Мнимая ось");
             plotView2.Model = Utils.GetLinearPlotModel("Переходная характеристика/ЛАЧХ", null, "t/Частота (рад/сек)", "Q(t)/Амплитуда (дБ)");
             RadioButton_Checked(null, null);
         }
@@ -76,7 +76,8 @@ namespace TAU_Complex.Pages.Vol2
                 return;
             }
 
-            double Dt = Properties.Settings.Default.Dt;
+            //double Dt = Properties.Settings.Default.Dt;
+            double Dt = Data.GetDt(new List<double> {T1,T2,T3 }, tk);
 
             double wv1, wv2 = 0, temp1 = 0, temp2 = 0, temp3 = 0;
 
@@ -153,7 +154,7 @@ namespace TAU_Complex.Pages.Vol2
             }
             else if ((bool)Radiobutton_Hz.IsChecked)
             {
-                plotView2.Model = Utils.GetLgPlotModel("ЛАЧХ", list_3, list_32 ,"Частота (рад/сек)", "Амплитуда (дБ)");
+                plotView2.Model = Utils.GetLgPlotModel("ЛАЧХ", list_3, list_32, "Частота (рад/сек)", "Амплитуда (дБ)");
             }
 
             plotView1.Model = Utils.GetRootPlotModel("Карта корней", list_11, list_12, "Вещественная ось", "Мнимая ось");
@@ -188,7 +189,7 @@ namespace TAU_Complex.Pages.Vol2
         }
         private double InterpolateX(List<DataPoint> list, double x)
         {
-            return list.FirstOrDefault(point => point.X == x).Y;
+            return list.Select(n => new { n, distance = Math.Abs(n.X - x) }).OrderBy(p => p.distance).FirstOrDefault().n.Y;
         }
         public static List<Complex> GetRootsOfCubicEquations(double a, double b, double c)
         {

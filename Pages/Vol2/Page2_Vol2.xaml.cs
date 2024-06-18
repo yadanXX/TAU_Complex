@@ -102,7 +102,9 @@ namespace TAU_Complex.Pages.Vol2
                 return;
             }
 
-            double Dt = Properties.Settings.Default.Dt;
+            //double Dt = Properties.Settings.Default.Dt;
+
+            double Dt = Data.GetDt(new List<double> { T1, T2,Tf}, tk);
 
             List<DataPoint> dataPoints1 = new List<DataPoint>();
 

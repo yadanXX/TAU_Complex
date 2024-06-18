@@ -34,6 +34,9 @@ namespace TAU_Complex
         private Page Page1_Vol2 = new Page1_Vol2();
         private Page Page2_Vol2 = new Page2_Vol2();
         private Page Page3_Vol2 = new Page3_Vol2();
+        private Page Page4_Vol2 = new Page4_Vol2();
+        private Page Page5_Vol2 = new Page5_Vol2();
+        private Page Page6_Vol2 = new Page6_Vol2();
 
         public MainWindow()
         {
@@ -74,8 +77,18 @@ namespace TAU_Complex
                 case "Button_3_SecondVol":
                     MainPanel.Content = Page3_Vol2;
                     break;
-
+                case "Button_4_SecondVol":
+                    MainPanel.Content = Page4_Vol2;
+                    break;
+                case "Button_5_SecondVol":
+                    MainPanel.Content = Page5_Vol2;
+                    break;
+                case "Button_6_SecondVol":
+                    MainPanel.Content = Page6_Vol2;
+                    break;
             }
+            SideMenu_Button.Visibility = Visibility.Visible;
+            Options_Button.Visibility = Visibility.Visible;
         }
         private void Button_Choose_Checked(object sender, RoutedEventArgs e)
         {
@@ -93,7 +106,11 @@ namespace TAU_Complex
             }
         }
 
-        #region Кнопки закрытия и перетаскивания
+        private void Options_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Options options = new Options();
+            options.ShowDialog();
+        }
         private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -101,19 +118,6 @@ namespace TAU_Complex
                 DragMove();
             }
         }
-        //private void Border_MouseDown_2(object sender, MouseButtonEventArgs e)
-        //{
-        //    this.Close();            
-        //}
-        //private void Border_MouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    Border_close_Copy.Background = System.Windows.Media.Brushes.Red;
-        //}
-        //private void Border_close_MouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    Border_close_Copy.Background = brush2;
-        //}
-
         private void Button_Click_min(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
@@ -125,6 +129,8 @@ namespace TAU_Complex
         private void Button_Click_close(object sender, RoutedEventArgs e)
         {
             MainPanel.Content = pageMainImage;
+            SideMenu_Button.Visibility = Visibility.Collapsed;
+            Options_Button.Visibility = Visibility.Collapsed;
         }
         private void Button_Click_slide(object sender, RoutedEventArgs e)
         {
@@ -138,9 +144,6 @@ namespace TAU_Complex
             }
 
         }
-
-        #endregion
-
 
     }
 }

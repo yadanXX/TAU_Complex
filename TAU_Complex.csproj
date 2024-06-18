@@ -73,6 +73,9 @@
     <Compile Include="ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Options.xaml.cs">
+      <DependentUpon>Options.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Vol1\Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
@@ -91,6 +94,15 @@
     <Compile Include="Pages\Vol1\Page6.xaml.cs">
       <DependentUpon>Page6.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Vol2\Page6_Vol2.xaml.cs">
+      <DependentUpon>Page6_Vol2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Vol2\Page5_Vol2.xaml.cs">
+      <DependentUpon>Page5_Vol2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Vol2\Page4_Vol2.xaml.cs">
+      <DependentUpon>Page4_Vol2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Vol2\Page3_Vol2.xaml.cs">
       <DependentUpon>Page3_Vol2.xaml</DependentUpon>
     </Compile>
@@ -103,6 +115,10 @@
     <Compile Include="WLink.cs" />
     <Compile Include="Utils.cs" />
     <Page Include="ErrorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Options.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +181,18 @@
     <Page Include="Pages\PageMainImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Vol2\Page6_Vol2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Vol2\Page5_Vol2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Vol2\Page4_Vol2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\Vol2\Page3_Vol2.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -397,6 +425,23 @@
     <Resource Include="Resources\Vol2\Page3_Vol2Pics\cхема с апериодическим.png" />
     <Resource Include="Resources\Vol2\Page3_Vol2Pics\cхема с интегрирующим.png" />
     <Resource Include="Resources\Vol2\Page3_Vol2Pics\cхема с колебательным.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\icons\T_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page4_Vol2Pics\Схема_следящей.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page5_Vol2Pics\В пространстве состояний без обратной связи.png" />
+    <Resource Include="Resources\Vol2\Page5_Vol2Pics\В пространстве состояний с обратной связью.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page5_Vol2Pics\передаточная функция системы управления.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Vol2\Page6_Vol2Pics\Линейная дискретная САУ.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

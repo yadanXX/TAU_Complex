@@ -49,7 +49,9 @@ namespace TAU_Complex.Pages.Vol1.Page1
                 return;
             }
 
-            double Dt = Properties.Settings.Default.Dt;
+            //double Dt = Properties.Settings.Default.Dt;
+
+            double Dt = Data.GetDt(null, tk);
 
             List<DataPoint> dataPoints = new List<DataPoint>();
             for (double i = 0; i < tk; i += Dt)

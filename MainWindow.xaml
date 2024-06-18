@@ -6,7 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:TAU_Complex"
     mc:Ignorable="d"
-    Title="MainWindow"
+    Title="ТАУ Complex"
+    Icon="/Resources/icons/T_ico.ico"
     Height="552"
     Width="935"
     WindowStyle="None">
@@ -33,46 +34,53 @@
             Grid.RowSpan="2"
             Grid.Column="0"
             Fill="#092e47" />
-        <Button
-            Grid.Row="0"
-            Grid.Column="1"
-            HorizontalAlignment="Right"
-            Margin="0,0,0,0"
-            Background="{x:Null}"
-            Click="Button_Click_exit">
-            <Image
-                Source="/Resources/icons/exit.png" />
-        </Button>
-        <Button
-            Grid.Row="0"
-            Grid.Column="1"
-            HorizontalAlignment="Right"
-            Margin="0,0,40,0"
-            Background="{x:Null}"
-            Click="Button_Click_min">
-            <Image
-                Source="/Resources/icons/min.png" />
-        </Button>
-        <Button
-            Grid.Row="0"
-            Grid.Column="1"
-            HorizontalAlignment="Left"
-            Margin="40,0,0,0"
-            Background="{x:Null}"
-            Click="Button_Click_close">
-            <Image
-                Source="/Resources/icons/Close.png" />
-        </Button>
-        <Button
-            Grid.Row="0"
-            Grid.Column="1"
-            HorizontalAlignment="Left"
-            Margin="0,0,0,0"
-            Background="{x:Null}"
-            Click="Button_Click_slide">
-            <Image
-                Source="/Resources/icons/slide_button_icon.png" />
-        </Button>
+        <DockPanel
+            Grid.Column="1">
+            <Button
+                DockPanel.Dock="Right"
+                HorizontalAlignment="Right"
+                Background="{x:Null}"
+                Click="Button_Click_exit">
+                <Image
+                    Source="/Resources/icons/exit.png" />
+            </Button>
+            <Button
+                DockPanel.Dock="Right"
+                HorizontalAlignment="Right"
+                Background="{x:Null}"
+                Click="Button_Click_min">
+                <Image
+                    Source="/Resources/icons/min.png" />
+            </Button>
+            <Button
+                DockPanel.Dock="Left"
+                HorizontalAlignment="Left"
+                Background="{x:Null}"
+                Click="Button_Click_slide">
+                <Image
+                    Source="/Resources/icons/slide_button_icon.png" />
+            </Button>
+            <Button
+                x:Name="SideMenu_Button"
+                DockPanel.Dock="Left"
+                HorizontalAlignment="Left"
+                Background="{x:Null}"
+                Click="Button_Click_close"
+                Visibility="Collapsed">
+                <Image
+                    Source="/Resources/icons/Close.png" />
+            </Button>
+            <Button
+                x:Name="Options_Button"
+                DockPanel.Dock="Left"
+                HorizontalAlignment="Left"
+                Background="{x:Null}"
+                Click="Options_Button_Click"
+                Visibility="Collapsed">
+                <Image
+                    Source="/Resources/icons/options.png" />
+            </Button>
+        </DockPanel>
         <StackPanel></StackPanel>
         <StackPanel
             x:Name="FirstVol_StackPanel"
@@ -81,7 +89,7 @@
             <RadioButton
                 Name="Button_1_FirstVol"
                 Style="{StaticResource menuButton}"
-                Content="Исследование переходных характиристик типовых динамических звеньев"
+                Content="Исследование переходных характеристик типовых динамических звеньев"
                 Click="RadioButton_Click"
                 Height="70" />
             <RadioButton
@@ -140,25 +148,25 @@
             <RadioButton
                 Name="Button_3_SecondVol"
                 Style="{StaticResource menuButton}"
-                Content="Корневые и частотные методы анлиза САУ"
+                Content="Корневые и частотные методы анализа  САУ"
                 Click="RadioButton_Click"
                 Height="70" />
             <RadioButton
                 Name="Button_4_SecondVol"
                 Style="{StaticResource menuButton}"
-                Content=""
+                Content="Синтез нелинейной следящей системы"
                 Click="RadioButton_Click"
                 Height="70" />
             <RadioButton
                 Name="Button_5_SecondVol"
                 Style="{StaticResource menuButton}"
-                Content=""
+                Content="Модальное управление"
                 Click="RadioButton_Click"
                 Height="70" />
             <RadioButton
                 Name="Button_6_SecondVol"
                 Style="{StaticResource menuButton}"
-                Content=""
+                Content="Исследование устойчивости линейной дискретной САУ"
                 Click="RadioButton_Click"
                 Height="70" />
         </StackPanel>
@@ -173,7 +181,6 @@
                 Name="Button_Choose_FirstVol"
                 Style="{StaticResource menuButton}"
                 Content="Часть 1"
-                Click="RadioButton_Click"
                 Width="100"
                 Grid.Column="0"
                 Checked="Button_Choose_Checked"
@@ -182,7 +189,6 @@
                 Name="Button_Choose_SecondVol"
                 Style="{StaticResource menuButton}"
                 Content="Часть 2"
-                Click="RadioButton_Click"
                 Width="100"
                 Grid.Column="1"
                 Checked="Button_Choose_Checked" />

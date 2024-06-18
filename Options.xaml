@@ -1,0 +1,100 @@
+﻿<Window
+    x:Class="TAU_Complex.Options"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TAU_Complex"
+    mc:Ignorable="d"
+    Icon="/Resources/icons/T_ico.ico"
+    Title="Настройки"
+    Height="150"
+    Width="490"
+    ResizeMode="NoResize"
+    Closing="Window_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/Styles/Variables.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <StackPanel
+            Orientation="Vertical">
+            <RadioButton
+                x:Name="FirstmMode_RadioButton"
+                Height="35"
+                VerticalContentAlignment="Center"
+                Margin="15,2,5,2"
+                Checked="RadioButton_Checked"
+                IsChecked="True">
+                <RadioButton.Content>
+                    <TextBlock
+                        FontSize="16"
+                        Text="Шаг в 10000 раз меньше времени построения" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton
+                x:Name="SecondMode_RadioButton"
+                Height="35"
+                VerticalContentAlignment="Center"
+                Margin="15,2,5,2"
+                Checked="RadioButton_Checked"
+                IsChecked="True">
+                <RadioButton.Content>
+                    <TextBlock
+                        FontSize="16"
+                        Text="Шаг в 100 раз меньше минимальной постоянной времени" />
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton
+                x:Name="ThridMode_RadioButton"
+                Height="35"
+                VerticalContentAlignment="Center"
+                Margin="15,2,5,2"
+                Checked="RadioButton_Checked"
+                IsChecked="True">
+                <RadioButton.Content>
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <TextBlock
+                            FontSize="16"
+                            Text="Фиксированный шаг"
+                            Height="20" />
+                        <Canvas
+                            Margin="5,5,0,5"
+                            HorizontalAlignment="Left"
+                            Width="20"
+                            Height="24"
+                            VerticalAlignment="Top">
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasLeft}"
+                                Text="D"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Width="13" />
+                            <TextBlock
+                                Style="{StaticResource ResourceKey=canvasBot}"
+                                Text="t"
+                                Canvas.Left="11"
+                                Canvas.Top="12"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Height="15"
+                                Width="7" />
+                        </Canvas>
+                        <TextBox
+                            x:Name="textBoxDt"
+                            Margin="5,5,0,5"
+                            FontSize="16"
+                            Height="24"
+                            VerticalAlignment="Top"
+                            Width="60" />
+                    </StackPanel>
+                </RadioButton.Content>
+            </RadioButton>
+        </StackPanel>
+    </Grid>
+</Window>
